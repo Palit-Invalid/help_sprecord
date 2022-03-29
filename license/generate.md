@@ -2,7 +2,7 @@
 title: Генерация ключей
 description: 
 published: true
-date: 2022-03-29T06:37:41.889Z
+date: 2022-03-29T06:59:46.599Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-29T06:37:41.889Z
@@ -41,7 +41,7 @@ docker run -it -p 8080:80 \
 # Resident
 Контейнер:
 ```
-cr.yandex/crp5420n8nnorope90n0/voipresident-licenser:latest
+docker pull cr.yandex/crp5420n8nnorope90n0/voipresident-licenser:latest
 ```
 Запуск осуществляется со следующими параметрами:
 ```
@@ -65,7 +65,8 @@ exit 0
 # Rutoken miniPBX
 Контейнер
 ```
-
+docker pull cr.yandex/crp5420n8nnorope90n0/minipbx-pc-firmware:latest
 ```
+Запуск осуществляется через `firmware.sh` из [архива](https://cdn.discordapp.com/attachments/692665979142012978/954279112590127124/minipbx-pc-firmware.tar.gz).
 
 

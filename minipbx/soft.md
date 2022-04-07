@@ -2,7 +2,7 @@
 title: Установка miniPBX на компьютер
 description: 
 published: true
-date: 2022-03-22T12:08:53.238Z
+date: 2022-04-07T12:57:46.086Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-15T12:18:37.759Z
@@ -80,6 +80,10 @@ minipbx-restart
 #### Статус
 ```
 minipbx-status
+```
+#### Консоль
+```
+minipbx-config
 ```
 
 ## Обновление АТС

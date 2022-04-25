@@ -2,7 +2,7 @@
 title: IPVideoRecord
 description: 
 published: true
-date: 2022-04-25T12:20:14.631Z
+date: 2022-04-25T12:23:01.983Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-25T12:14:44.140Z
@@ -44,8 +44,8 @@ RUN cp /usr/lib/x86_64-linux-gnu/qt5/plugins/sqldrivers/libqsqlite.so /usr/lib/i
 RUN cp /usr/lib/x86_64-linux-gnu/qca-qt5/crypto/libqca-ossl.so /usr/lib/x86_64-linux-gnu/plugins/crypto
 RUN cp /usr/lib/x86_64-linux-gnu/qt5/plugins/sqldrivers/libqsqlite.so /usr/lib/x86_64-linux-gnu/plugins/sqldrivers
 
-COPY bin/3.9.4.508/iprecord/ipvideoserver_3.9.4.508_amd64.deb /root/ipvr.deb
-COPY docker/install.sh /root
+COPY ipvideoserver_4.0.4.519_amd64.deb /root/ipvr.deb
+COPY install.sh /root
 
 CMD ["/root/install.sh"]
 ```

@@ -2,7 +2,7 @@
 title: IPVideoRecord
 description: 
 published: true
-date: 2022-04-25T12:23:01.983Z
+date: 2022-04-25T12:28:08.948Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-25T12:14:44.140Z
@@ -52,6 +52,6 @@ CMD ["/root/install.sh"]
 
 ## install.sh
 ```
-dpkg -i ipvr.dev
+dpkg -i ipvr.deb
 /usr/bin/ipvideoserver -e
 ```

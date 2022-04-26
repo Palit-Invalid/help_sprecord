@@ -2,7 +2,7 @@
 title: Запуск IPVideoRecord через Docker
 description: 
 published: true
-date: 2022-04-26T10:01:09.751Z
+date: 2022-04-26T10:27:56.111Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-26T09:51:15.043Z
@@ -88,7 +88,7 @@ services:
       - PREPARATOR=TRUE
     networks:
       ipvr_net_backend:
-        ipv4_address: 172.16.1.1
+        ipv4_address: 172.16.1.2
         aliases:
           - ipvr
           - ipvr-server

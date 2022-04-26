@@ -2,7 +2,7 @@
 title: Запуск IPVideoRecord через Docker
 description: 
 published: true
-date: 2022-04-26T10:27:56.111Z
+date: 2022-04-26T10:29:49.604Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-26T09:51:15.043Z
@@ -14,11 +14,11 @@ dateCreated: 2022-04-26T09:51:15.043Z
 
 В Ubuntu/Debian/Astra это можно сделать командой:
 ```
-apt update && apt install -y docker.io
+apt update && apt install -y docker.io docker-compose
 ```
 В CentOS/Fedora/RedHat:
 ```
-yum install -y docker
+yum install -y docker docker-compose
 ```
 
 # Загрузка образа

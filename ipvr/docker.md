@@ -2,7 +2,7 @@
 title: Запуск IPVideoRecord через Docker
 description: 
 published: true
-date: 2022-04-26T10:00:15.237Z
+date: 2022-04-26T10:01:09.751Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-26T09:51:15.043Z
@@ -103,7 +103,7 @@ networks:
 ```
 Запуск осуществляется командой:
 ```
-docker-compose up
+docker-compose up -d
 ```
 Остановка:
 ```

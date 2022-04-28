@@ -2,7 +2,7 @@
 title: Запуск IPVideoRecord через Docker
 description: 
 published: true
-date: 2022-04-26T10:29:49.604Z
+date: 2022-04-28T05:50:20.267Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-26T09:51:15.043Z
@@ -84,6 +84,8 @@ services:
       - /mnt/log:/var/log/ipvideorecord:rw
       - /mnt/video:/videocam:rw
       - /mnt/photo:/photocam:rw
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
     environment:
       - PREPARATOR=TRUE
     networks:

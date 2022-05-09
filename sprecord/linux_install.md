@@ -2,7 +2,7 @@
 title: Установка SpRecord на Linux
 description: 
 published: true
-date: 2022-04-29T11:04:18.269Z
+date: 2022-05-09T11:37:06.486Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-18T10:15:43.449Z
@@ -17,17 +17,16 @@ dateCreated: 2022-02-18T10:15:43.449Z
 1. Загрузите дистрибутив.
 - Для amd64:
 ```
-wget https://sprecord.ru/files/downloads/linux/native/FirebirdCS-2.5.9.27139_amd64.deb -o firebird-2.5.9.deb
+wget https://sprecord.ru/files/downloads/linux/native/FirebirdCS-2.5.9.27139_amd64.deb 
 ```
 - Для arm64:
 ```
-wget https://sprecord.ru/files/downloads/linux/native/FirebirdCS-2.5.9.27139_arm64.deb -o firebird-2.5.9.deb
+wget https://sprecord.ru/files/downloads/linux/native/FirebirdCS-2.5.9.27139_arm64.deb
 ```
 
-2. Установите дистриубтив при помощи утилиты `gdebi`, которая автоматически разрешает все зависимости:
+2. Установите дистрибутив при помощи утилиты `apt`:
 ```
-sudo apt install gdebi -y
-sudo gdebi firebird-2.5.9.deb
+sudo apt install ./FirebirdCS-2.5.9.27139_amd64.deb
 ```
 
 3. Убедитесь, что служба `firebird-cs` запустилась:

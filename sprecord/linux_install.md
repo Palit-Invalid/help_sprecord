@@ -2,7 +2,7 @@
 title: Установка SpRecord на Linux
 description: 
 published: true
-date: 2022-05-09T11:37:06.486Z
+date: 2022-05-09T11:42:27.905Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-18T10:15:43.449Z
@@ -17,16 +17,16 @@ dateCreated: 2022-02-18T10:15:43.449Z
 1. Загрузите дистрибутив.
 - Для amd64:
 ```
-wget https://sprecord.ru/files/downloads/linux/native/FirebirdCS-2.5.9.27139_amd64.deb 
+wget https://sprecord.ru/files/downloads/linux/native/FirebirdCS-2.5.9.27139_amd64.deb -O firebird.deb
 ```
 - Для arm64:
 ```
-wget https://sprecord.ru/files/downloads/linux/native/FirebirdCS-2.5.9.27139_arm64.deb
+wget https://sprecord.ru/files/downloads/linux/native/FirebirdCS-2.5.9.27139_arm64.deb -O firebird.deb
 ```
 
 2. Установите дистрибутив при помощи утилиты `apt`:
 ```
-sudo apt install ./FirebirdCS-2.5.9.27139_amd64.deb
+sudo apt install ./firebird.deb
 ```
 
 3. Убедитесь, что служба `firebird-cs` запустилась:
@@ -42,16 +42,16 @@ systemctl enable --now firebird-cs
 1. Загрузите дистрибутив.
 - Для amd64:
 ```
-wget https://sprecord.ru/files/downloads/linux/native/sprecord_1.2.0-151_amd64.deb -o sprecord_1.2.0.deb
+wget https://sprecord.ru/files/downloads/linux/native/sprecord_1.2.0-151_amd64.deb -O sprecord_1.2.0.deb
 ```
 - Для arm64
 ```
-wget https://sprecord.ru/files/downloads/linux/native/sprecord_1.2.0-138_amd64.deb -o sprecord_1.2.0.deb
+wget https://sprecord.ru/files/downloads/linux/native/sprecord_1.2.0-138_amd64.deb -O sprecord_1.2.0.deb
 ```
 
 2. Запустите установку при помощи gdebi:
 ```
-sudo gdebi sprecord_1.2.0.deb
+sudo apt install ./sprecord_1.2.0.deb
 ````
 
 3. Запуск осуществляется при помощи команды "sprecord" либо из меню приложений.

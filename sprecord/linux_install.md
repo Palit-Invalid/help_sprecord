@@ -2,7 +2,7 @@
 title: Установка SpRecord на Linux
 description: 
 published: true
-date: 2022-05-10T07:56:19.346Z
+date: 2022-05-10T07:57:12.474Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-18T10:15:43.449Z
@@ -49,7 +49,7 @@ wget https://sprecord.ru/files/downloads/linux/native/sprecord_1.2.0-151_amd64.d
 wget https://sprecord.ru/files/downloads/linux/native/sprecord_1.2.0-138_arm64.deb -O sprecord_1.2.0.deb
 ```
 
-2. Запустите установку при помощи gdebi:
+2. Запустите установку при помощи `apt`:
 ```
 sudo apt install ./sprecord_1.2.0.deb
 ````

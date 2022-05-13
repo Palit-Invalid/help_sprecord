@@ -2,7 +2,7 @@
 title: Запуск IPVideoRecord через Docker
 description: 
 published: true
-date: 2022-04-28T05:50:20.267Z
+date: 2022-05-13T07:21:37.221Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-26T09:51:15.043Z
@@ -43,7 +43,7 @@ echo "Run as root!"
 exit 1
 fi
 
-docker run -it \
+docker run -d \
 	-p 9460:9460 \
 	-p 9860:9860 \
 	--rm \

@@ -2,7 +2,7 @@
 title: База знаний SpRecord
 description: 
 published: true
-date: 2022-05-19T12:01:29.362Z
+date: 2022-05-19T12:02:04.649Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -15,7 +15,7 @@ dateCreated: 2021-04-06T14:34:39.273Z
 - [![thoubleshooting](/troubleshooting.svg =25x25){.align-left}Устранение проблем](./minipbx/fix_troubles)
 - [![logging.svg](/logging.svg =25x25){.align-left}API](./minipbx/api)
 - [![new.png](/new.png =x30){.align-left}Установка на компьютер](./minipbx/soft)
-- [![bitrix_cloud.png](/minipbx/bitrix_cloud.png =40x25){.align-left}Интеграция с Битрикс24](./minipbx/bitrix)
+- [![bitrix_cloud.png](/minipbx/bitrix_cloud.png =40x25){.align-left}Интеграция с Битрикс24](./minipbx/bitrix24)
 {.links-list}
 
 

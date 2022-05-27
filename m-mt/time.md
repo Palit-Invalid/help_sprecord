@@ -2,7 +2,7 @@
 title: Настройка времени
 description: 
 published: true
-date: 2022-05-27T05:05:51.922Z
+date: 2022-05-27T05:07:34.906Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-27T04:32:15.531Z
@@ -20,6 +20,10 @@ NTP=ntp_server_hostname_1
 7. Закройте коммандер, нажав F10.
 8. Перезапустите службу NTP, выполнив команду `systemctl restart systemd-timesyncd`
 После этого нужно подождать какое-то время, пока часы не синхронизируются (ориентировочно до 15 минут).
+
+> Все параметры для конфигурационного файла можно найти [здесь](https://www.freedesktop.org/software/systemd/man/timesyncd.conf.html#)
+{.is-info}
+
 
 # Ручная настройка времени
 1. Подключитесь через SSH к устройству (реквизиты - root/orangepi)

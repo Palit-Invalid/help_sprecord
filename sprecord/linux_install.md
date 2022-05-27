@@ -2,7 +2,7 @@
 title: Установка SpRecord на Linux
 description: 
 published: true
-date: 2022-05-10T07:57:12.474Z
+date: 2022-05-27T12:33:43.670Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-18T10:15:43.449Z
@@ -21,7 +21,7 @@ wget https://sprecord.ru/files/downloads/linux/native/FirebirdCS-2.5.9.27139_amd
 ```
 - Для arm64:
 ```
-wget https://sprecord.ru/files/downloads/linux/native/FirebirdCS-2.5.9.27139_arm64.deb -O firebird.deb
+wget https://sprecord.ru/files/downloads/linux/native/firebirdcs_2.5.9.27139_arm64.deb -O firebird.deb
 ```
 
 2. Установите дистрибутив при помощи утилиты `apt`:

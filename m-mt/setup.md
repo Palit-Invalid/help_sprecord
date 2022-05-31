@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-05-31T06:48:13.109Z
+date: 2022-05-31T07:01:27.999Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -58,7 +58,7 @@ armbian-add-overlay nanopi-neo-stable-mac.dts
 ## Установка графической оболочки
 ### Установка необходимых пакетов
 ```
-apt update && apt install -y xorg xserver-xorg-video-dummy lightdm lightdm-gtk-greeter xfce4
+apt update && apt install -y xorg xserver-xorg-video-dummy lightdm xfce4 xfce4-goodies
 ```
 ### Создание виртуального монитора
 Необходимо создать файл `/usr/share/X11/xorg.conf.d/xorg.conf` с содержимым:
@@ -104,10 +104,9 @@ autologin-user-timeout=0
 ```
 apt install tightvncserver x11vnc
 ```
-> tightvncserver по сути нужен только для команды `vncpasswd`, которая меняет пароль.
-{.is-info}
+> `tightvncserver` по сути нужен только для команды `vncpasswd`, которая меняет пароль. Её нужно как минимум один раз запустить от пользователя `sprecord`, чтобы пароль создался.
 
-Для добавления в автозагрузку VNC-сервера надо создать файлx /home/sprecord/.config/autostart/x11vnc.desktop
+Для добавления в автозагрузку VNC-сервера надо создать файлx `/home/sprecord/.config/autostart/x11vnc.desktop`
 ```
 [Desktop Entry]
 Encoding=UTF-8

@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-05-31T07:01:27.999Z
+date: 2022-05-31T07:06:07.762Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -99,7 +99,7 @@ allow-guest=false
 autologin-user=sprecord
 autologin-user-timeout=0
 ```
-### Настройка VNC
+## Настройка VNC
 Установить пакеты:
 ```
 apt install tightvncserver x11vnc
@@ -120,3 +120,18 @@ StartupNotify=false
 Terminal=false
 Hidden=false
 ```
+
+# Установка SpRecord и Firebird
+## Firebird
+На сервере лежит DEB-пакет, который нужно установить
+```
+wget sprecord.ru/files/downloads/linux/native/firebirdcs_2.5.9.27139_armhf.deb -O firebird.deb
+apt install ./firebird.deb
+rm firebird.deb
+```
+По итогу должна запуститься служба `firebird-cs`
+```
+systemctl status firebird-cs
+```
+
+## SpRecord

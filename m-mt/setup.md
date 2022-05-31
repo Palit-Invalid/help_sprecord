@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-05-31T11:40:11.947Z
+date: 2022-05-31T11:42:41.718Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -180,3 +180,6 @@ apt install libmp3lame0 at-spi2-core wmctrl yad
 ```
 /home/sprecord/bin/update_sprecord.sh
 ```
+
+### Убрать управление eth0 у NetworkManager'а
+В файле `/etc/NetworkManager/NetworkManager.conf` поставить `managed=false`

@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-05-31T07:36:41.583Z
+date: 2022-05-31T07:39:23.592Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -146,3 +146,8 @@ chown -R sprecord:sprecord /var/log/sprecord && \
 chown -R sprecord:sprecord /var/cache/sprecord && \
 chown sprecord:sprecord /etc/sprecord.conf
 ```
+Перенести библиотеки libftd2xx.so.1.4.8 в `/usr/local/lib` и создать ссылку:
+```
+ln -sf /usr/local/lib/libftd2xx.so.1.4.8 /usr/local/lib/libftd2xx.so
+```
+

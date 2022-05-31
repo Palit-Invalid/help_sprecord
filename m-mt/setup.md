@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-05-31T11:30:28.026Z
+date: 2022-05-31T11:40:11.947Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -173,9 +173,8 @@ SUBSYSTEM=="gpio*", PROGRAM="/bin/sh -c 'chown -R root:gpio /sys/class/gpio && c
 ```
 
 ### Установка зависимостей
-MP3-кодек:
-```
-apt install libmp3lame0 at-spi2-core
+``` 
+apt install libmp3lame0 at-spi2-core wmctrl yad
 ```
 Всё недостающее можно установить запустив скрипт обновления sprecord'а:
 ```

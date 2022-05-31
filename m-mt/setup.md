@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-05-31T06:40:13.318Z
+date: 2022-05-31T06:48:13.109Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -98,4 +98,26 @@ greeter-hide-users=false
 allow-guest=false
 autologin-user=sprecord
 autologin-user-timeout=0
+```
+### Настройка VNC
+Установить пакеты:
+```
+apt install tightvncserver x11vnc
+```
+> tightvncserver по сути нужен только для команды `vncpasswd`, которая меняет пароль.
+{.is-info}
+
+Для добавления в автозагрузку VNC-сервера надо создать файлx /home/sprecord/.config/autostart/x11vnc.desktop
+```
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=x11vnc
+Comment=
+Exec=x11vnc -usepw -display :0 -q -forever
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=false
 ```

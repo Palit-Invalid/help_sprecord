@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-05-31T07:23:12.558Z
+date: 2022-05-31T07:36:41.583Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -135,7 +135,10 @@ systemctl status firebird-cs
 ```
 
 ## SpRecord
-Перенести директории `/home/sprecord/bin` и `/var/lib/sprecord{http,Localize}`
+Перенести директории `/home/sprecord/bin` и `/var/lib/sprecord{http,Localize}`. Дать права на исполнение:
+```
+chmod +x /home/sprecord/bin/*
+```
 Создать директории и файлы с необходимыми правами:
 ```
 mkdir /var/log/sprecord && mkdir /var/cache/sprecord && touch /etc/sprecord.conf && \

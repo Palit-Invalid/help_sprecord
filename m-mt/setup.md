@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-05-31T07:39:23.592Z
+date: 2022-05-31T08:39:11.956Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -146,8 +146,38 @@ chown -R sprecord:sprecord /var/log/sprecord && \
 chown -R sprecord:sprecord /var/cache/sprecord && \
 chown sprecord:sprecord /etc/sprecord.conf
 ```
-Перенести библиотеки libftd2xx.so.1.4.8 в `/usr/local/lib` и создать ссылку:
+Перенести библиотеку `libftd2xx.so.1.4.8` в `/usr/local/lib` и создать ссылку:
 ```
 ln -sf /usr/local/lib/libftd2xx.so.1.4.8 /usr/local/lib/libftd2xx.so
 ```
+Заблокировать загрузку модуля `ftdi_sio`
+```
+echo "blacklist ftdi_sio" > /etc/modprobe.d/ftdi.conf
+```
+Добавить в udev правило
+```
+echo 'ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{product}=="SpRecord USB Device", MODE="0666"' > /etc/udev/rules.d/99-ftdi-sprecord.rules
+```
 
+В ~/.bashrc добавить путь /home/sprecord/bin, чтобы можно было запускать sprecord хоть откуда
+```
+echo "PATH=$HOME/bin:$PATH" >> ~/.bashrc
+```
+### Дать доступ к GPIO (для реагирования на кнопки)  
+```
+groupadd gpio && adduser sprecord gpio
+```
+Создать `/etc/udev/rules.d/98-gpio.rules`:
+```
+SUBSYSTEM=="gpio*", PROGRAM="/bin/sh -c 'chown -R root:gpio /sys/class/gpio && chmod -R 770 /sys/class/gpio; chown -R root:gpio /sys/devices/platform/sunxi-pinctrl/gpio && chmod -R 770 /sys/devices/platform/sunxi-pinctrl/gpio;'"
+```
+
+### Установка зависимостей
+MP3-кодек:
+```
+apt install libmp3lame0
+```
+Всё недостающее можно установить запустив скрипт обновления sprecord'а:
+```
+/home/sprecord/bin/update_sprecord.sh
+```

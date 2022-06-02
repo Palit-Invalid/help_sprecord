@@ -2,7 +2,7 @@
 title: Установка SpRecord на Linux
 description: 
 published: true
-date: 2022-06-02T13:54:54.113Z
+date: 2022-06-02T13:55:15.654Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-18T10:15:43.449Z
@@ -42,16 +42,16 @@ systemctl enable --now firebird-cs
 1. Загрузите дистрибутив.
 - Для amd64:
 ```
-wget https://sprecord.ru/files/downloads/linux/native/sprecord_1.2.0-151_amd64.deb -O sprecord_1.2.0.deb
+wget https://sprecord.ru/files/downloads/linux/native/sprecord_1.2.0-151_amd64.deb -O sprecord.deb
 ```
 - Для arm64
 ```
-wget https://sprecord.ru/files/downloads/linux/native/sprecord_1.2.0-138_arm64.deb -O sprecord_1.2.0.deb
+wget https://sprecord.ru/files/downloads/linux/native/sprecord_1.2.0-138_arm64.deb -O sprecord.deb
 ```
 
 2. Запустите установку при помощи `apt`:
 ```
-sudo apt install ./sprecord_1.2.0.deb
+sudo apt install ./sprecord.deb
 ````
 
 3. Запуск осуществляется при помощи команды "sprecord" либо из меню приложений.

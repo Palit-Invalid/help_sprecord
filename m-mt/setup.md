@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-06-06T11:48:56.971Z
+date: 2022-06-06T12:58:02.047Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -142,9 +142,9 @@ wget sprecord.ru/files/downloads/linux/native/firebirdcs_2.5.9.27139_armhf.deb -
 apt install ./firebird.deb
 rm firebird.deb
 ```
-По итогу должна запуститься служба `firebird-cs`
+По итогу должен запуститься соек `firebird-cs`
 ```
-systemctl status firebird-cs
+systemctl status firebird-cs.socket
 ```
 
 ## SpRecord

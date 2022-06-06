@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-06-06T10:38:26.617Z
+date: 2022-06-06T10:38:48.844Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -152,7 +152,6 @@ apt install libmp3lame0 libmp3lame-dev libsndfile1 at-spi2-core wmctrl yad
 ```
 /home/sprecord/bin/update_sprecord.sh
 ```
-
 Перенести директории `/home/sprecord/bin` и `/var/lib/sprecord{http,Localize}`. Дать права на исполнение:
 ```
 chmod +x /home/sprecord/bin/*

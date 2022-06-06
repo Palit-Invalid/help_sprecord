@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-06-06T11:30:30.500Z
+date: 2022-06-06T11:31:44.172Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -158,13 +158,13 @@ unzip sprecord_mt.zip
 | graceful-logout | /home/sprecord/.config |
 | sprecord | /var/lib |
 Файлы из директории `lib` поместить в `/usr/local/lib`.
-Всё недостающее можно установить запустив скрипт обновления sprecord'а:
-```
-/home/sprecord/bin/update_sprecord.sh
-```
 Дать права на исполнение:
 ```
 chmod +x /home/sprecord/bin/*
+```
+Всё недостающее можно установить запустив скрипт обновления sprecord'а:
+```
+/home/sprecord/bin/update_sprecord.sh
 ```
 Создать директории и файлы с необходимыми правами:
 ```

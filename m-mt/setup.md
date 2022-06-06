@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-06-06T10:38:48.844Z
+date: 2022-06-06T11:07:07.500Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -55,12 +55,11 @@ armbian-add-overlay nanopi-neo-stable-mac.dts
 ```
 Взято отсюда: https://forum.armbian.com/topic/14525-mac-address-of-eth0-changes-on-every-boot/
 
-## Установка графической оболочки
-### Установка необходимых пакетов
+## Установка необходимых пакетов
 ```
-apt update && apt install -y xorg xserver-xorg-video-dummy lightdm xfce4 xfce4-goodies
+apt update && apt install -y xorg xserver-xorg-video-dummy lightdm xfce4 xfce4-goodies avahi-daemon iptables-persistent tightvncserver x11vnc usbmount
 ```
-### Создание виртуального монитора
+## Создание виртуального монитора
 Необходимо создать файл `/usr/share/X11/xorg.conf.d/xorg.conf` с содержимым:
 ```
 Section "Device"
@@ -88,7 +87,7 @@ Section "Screen"
     EndSubSection
 EndSection
 ```
-### Настройка автологина
+## Настройка автологина
 Необходимо создать файл `/etc/lightdm/lightdm.conf.d/11-armbian.conf` с содержимым:
 ```
 [Seat:*]
@@ -100,13 +99,9 @@ autologin-user=sprecord
 autologin-user-timeout=0
 ```
 ## Настройка VNC
-Установить пакеты:
-```
-apt install tightvncserver x11vnc
-```
 > `tightvncserver` по сути нужен только для команды `vncpasswd`, которая меняет пароль. Её нужно как минимум один раз запустить от пользователя `sprecord`, чтобы пароль создался.
 
-Для добавления в автозагрузку VNC-сервера надо создать файлx `/home/sprecord/.config/autostart/x11vnc.desktop`
+Для добавления в автозагрузку VNC-сервера надо создать файл `/home/sprecord/.config/autostart/x11vnc.desktop`
 ```
 [Desktop Entry]
 Encoding=UTF-8
@@ -122,12 +117,15 @@ Hidden=false
 ```
 
 ## Автомонтирование
-Для автомонтирования USB-дисков:
-```
-apt-get install usbmount
-```
 Отредактировать файл настроек `/etc/usbmount/usbmount.conf` :
    - в параметр "MOUNTOPTIONS" добавить строку без кавычек ",uid=1000,gid=1000,utf8=1"
+   
+## Перенаправление портов
+```
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080 && \
+iptables -t nat -A POSTROUTING -p tcp --sport 8080 -j SNAT --to-source :80 && \
+iptables-save > /etc/iptables/rules.v4
+```
 
 
 # Установка SpRecord и Firebird
@@ -148,6 +146,18 @@ systemctl status firebird-cs
 ``` 
 apt install libmp3lame0 libmp3lame-dev libsndfile1 at-spi2-core wmctrl yad
 ```
+### Установка программы
+Скачать архив и распаковать его:
+```
+wget sprecord.ru/files/downloads/linux/native/mt/sprecord_mt.zip &&
+unzip sprecord_mt.zip
+```
+| Директория | Расположение |
+| --- | --- |
+| bin | /home/sprecord |
+| applications | /home/sprecord/.local/share |
+| graceful-logout | /home/sprecord/.config |
+Файлы из директории `lib` поместить в `/usr/local/lib`.
 Всё недостающее можно установить запустив скрипт обновления sprecord'а:
 ```
 /home/sprecord/bin/update_sprecord.sh
@@ -193,7 +203,22 @@ SUBSYSTEM=="gpio*", PROGRAM="/bin/sh -c 'chown -R root:gpio /sys/class/gpio && c
 ```
 SUBSYSTEM=="gpio*", PROGRAM="/bin/sh -c 'chown -R root:gpio /sys/class/gpio && chmod -R 770 /sys/class/gpio; chown -R root:gpio /sys/devices/platform/soc/1c20800.pinctrl/gpiochip0/gpio && chmod -R 770 /sys/devices/platform/soc/1c20800.pinctrl/gpiochip0/gpio;'"
 ```
+### Добавить в автозагрузку
 
+Для добавления в автозагрузку SpRecord'а надо создать файл `/home/sprecord/.config/autostart/sprecord.desktop`
+```
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=sprecord
+Comment=
+Exec=sprecord
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=false
+```
 
 
 ### Убрать управление eth0 у NetworkManager'а

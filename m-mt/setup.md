@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-06-06T09:32:00.716Z
+date: 2022-06-06T10:38:26.617Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -121,6 +121,15 @@ Terminal=false
 Hidden=false
 ```
 
+## Автомонтирование
+Для автомонтирования USB-дисков:
+```
+apt-get install usbmount
+```
+Отредактировать файл настроек `/etc/usbmount/usbmount.conf` :
+   - в параметр "MOUNTOPTIONS" добавить строку без кавычек ",uid=1000,gid=1000,utf8=1"
+
+
 # Установка SpRecord и Firebird
 ## Firebird
 На сервере лежит DEB-пакет, который нужно установить
@@ -135,6 +144,15 @@ systemctl status firebird-cs
 ```
 
 ## SpRecord
+### Установка зависимостей
+``` 
+apt install libmp3lame0 libmp3lame-dev libsndfile1 at-spi2-core wmctrl yad
+```
+Всё недостающее можно установить запустив скрипт обновления sprecord'а:
+```
+/home/sprecord/bin/update_sprecord.sh
+```
+
 Перенести директории `/home/sprecord/bin` и `/var/lib/sprecord{http,Localize}`. Дать права на исполнение:
 ```
 chmod +x /home/sprecord/bin/*
@@ -177,14 +195,7 @@ SUBSYSTEM=="gpio*", PROGRAM="/bin/sh -c 'chown -R root:gpio /sys/class/gpio && c
 SUBSYSTEM=="gpio*", PROGRAM="/bin/sh -c 'chown -R root:gpio /sys/class/gpio && chmod -R 770 /sys/class/gpio; chown -R root:gpio /sys/devices/platform/soc/1c20800.pinctrl/gpiochip0/gpio && chmod -R 770 /sys/devices/platform/soc/1c20800.pinctrl/gpiochip0/gpio;'"
 ```
 
-### Установка зависимостей
-``` 
-apt install libmp3lame0 libmp3lame-dev at-spi2-core wmctrl yad
-```
-Всё недостающее можно установить запустив скрипт обновления sprecord'а:
-```
-/home/sprecord/bin/update_sprecord.sh
-```
+
 
 ### Убрать управление eth0 у NetworkManager'а
 В файле `/etc/NetworkManager/NetworkManager.conf` поставить `managed=false`

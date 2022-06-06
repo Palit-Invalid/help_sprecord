@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-05-31T11:42:41.718Z
+date: 2022-06-06T05:08:26.992Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -167,9 +167,14 @@ echo "PATH=$HOME/bin:$PATH" >> ~/.bashrc
 ```
 groupadd gpio && adduser sprecord gpio
 ```
-Создать `/etc/udev/rules.d/98-gpio.rules`:
+Создать `/etc/udev/rules.d/98-gpio.rules`.
+Для OrangePi содерждимое такое:
 ```
 SUBSYSTEM=="gpio*", PROGRAM="/bin/sh -c 'chown -R root:gpio /sys/class/gpio && chmod -R 770 /sys/class/gpio; chown -R root:gpio /sys/devices/platform/sunxi-pinctrl/gpio && chmod -R 770 /sys/devices/platform/sunxi-pinctrl/gpio;'"
+```
+Для NanoPi:
+```
+SUBSYSTEM=="gpio*", PROGRAM="/bin/sh -c 'chown -R root:gpio /sys/class/gpio && chmod -R 770 /sys/class/gpio; chown -R root:gpio /sys/devices/platform/soc/1c20800.pinctrl/gpiochip0/gpio && chmod -R 770 /sys/devices/platform/soc/1c20800.pinctrl/gpiochip0/gpio;'"
 ```
 
 ### Установка зависимостей

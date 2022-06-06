@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-06-06T11:31:44.172Z
+date: 2022-06-06T11:35:39.730Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -126,6 +126,13 @@ iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080 && \
 iptables -t nat -A POSTROUTING -p tcp --sport 8080 -j SNAT --to-source :80 && \
 iptables-save > /etc/iptables/rules.v4
 ```
+
+## Сервисы по управлению GPIO
+Подключение аппаратных часов: sprecord.ru/files/downloads/linux/native/mt/rtc.zip
+Регулировка скорости вентилятора: sprecord.ru/files/downloads/linux/native/mt/fan-control.zip
+Отключение вентилятора при отключении: sprecord.ru/files/downloads/linux/native/mt/latest.zip
+Отслеживание кнопки выключения: sprecord.ru/files/downloads/linux/native/mt/check-button.zip
+Включение хаба: sprecord.ru/files/downloads/linux/native/mt/hub-enable.zip
 
 # Установка SpRecord и Firebird
 ## Firebird

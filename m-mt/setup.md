@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-06-06T11:07:07.500Z
+date: 2022-06-06T11:30:09.722Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -157,12 +157,13 @@ unzip sprecord_mt.zip
 | bin | /home/sprecord |
 | applications | /home/sprecord/.local/share |
 | graceful-logout | /home/sprecord/.config |
+| sprecord | /var/lib |
 Файлы из директории `lib` поместить в `/usr/local/lib`.
 Всё недостающее можно установить запустив скрипт обновления sprecord'а:
 ```
 /home/sprecord/bin/update_sprecord.sh
 ```
-Перенести директории `/home/sprecord/bin` и `/var/lib/sprecord{http,Localize}`. Дать права на исполнение:
+Дать права на исполнение:
 ```
 chmod +x /home/sprecord/bin/*
 ```
@@ -173,10 +174,6 @@ chown -R sprecord:sprecord /var/log/sprecord && \
 chown -R sprecord:sprecord /var/cache/sprecord && \
 chown sprecord:sprecord /etc/sprecord.conf
 ```
-Перенести библиотеку `libftd2xx.so.1.4.8` в `/usr/local/lib` и создать ссылку:
-```
-ln -sf /usr/local/lib/libftd2xx.so.1.4.8 /usr/local/lib/libftd2xx.so
-```
 Заблокировать загрузку модуля `ftdi_sio`
 ```
 echo "blacklist ftdi_sio" > /etc/modprobe.d/ftdi.conf
@@ -185,21 +182,22 @@ echo "blacklist ftdi_sio" > /etc/modprobe.d/ftdi.conf
 ```
 echo 'ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{product}=="SpRecord USB Device", MODE="0666"' > /etc/udev/rules.d/99-ftdi-sprecord.rules
 ```
-
-В ~/.bashrc добавить путь /home/sprecord/bin, чтобы можно было запускать sprecord хоть откуда
+создать скрипт "\usr\bin\sprecord" с таким содержимым (наличие такого скрипта в этой папке позволяет запускать программу спрекорд из любой папки):
 ```
-echo "PATH=$HOME/bin:$PATH" >> ~/.bashrc
+#!/bin/sh
+$HOME/bin/sprecord
+exit $?  
 ```
 ### Дать доступ к GPIO (для реагирования на кнопки)  
 ```
 groupadd gpio && adduser sprecord gpio
 ```
 Создать `/etc/udev/rules.d/98-gpio.rules`.
-Для OrangePi:
+- Для OrangePi:
 ```
 SUBSYSTEM=="gpio*", PROGRAM="/bin/sh -c 'chown -R root:gpio /sys/class/gpio && chmod -R 770 /sys/class/gpio; chown -R root:gpio /sys/devices/platform/sunxi-pinctrl/gpio && chmod -R 770 /sys/devices/platform/sunxi-pinctrl/gpio;'"
 ```
-Для NanoPi:
+- Для NanoPi:
 ```
 SUBSYSTEM=="gpio*", PROGRAM="/bin/sh -c 'chown -R root:gpio /sys/class/gpio && chmod -R 770 /sys/class/gpio; chown -R root:gpio /sys/devices/platform/soc/1c20800.pinctrl/gpiochip0/gpio && chmod -R 770 /sys/devices/platform/soc/1c20800.pinctrl/gpiochip0/gpio;'"
 ```
@@ -219,7 +217,5 @@ StartupNotify=false
 Terminal=false
 Hidden=false
 ```
-
-
 ### Убрать управление eth0 у NetworkManager'а
 В файле `/etc/NetworkManager/NetworkManager.conf` поставить `managed=false`

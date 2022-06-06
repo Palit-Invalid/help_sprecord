@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-06-06T05:08:54.238Z
+date: 2022-06-06T09:32:00.716Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -168,7 +168,7 @@ echo "PATH=$HOME/bin:$PATH" >> ~/.bashrc
 groupadd gpio && adduser sprecord gpio
 ```
 Создать `/etc/udev/rules.d/98-gpio.rules`.
-Для OrangePi содерждимое такое:
+Для OrangePi:
 ```
 SUBSYSTEM=="gpio*", PROGRAM="/bin/sh -c 'chown -R root:gpio /sys/class/gpio && chmod -R 770 /sys/class/gpio; chown -R root:gpio /sys/devices/platform/sunxi-pinctrl/gpio && chmod -R 770 /sys/devices/platform/sunxi-pinctrl/gpio;'"
 ```

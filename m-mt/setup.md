@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-06-06T11:35:39.730Z
+date: 2022-06-06T11:37:47.311Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -82,8 +82,8 @@ Section "Screen"
     SubSection "Display"
       Viewport 0 0
       Depth 24
-      Modes "1600x900"
-      Virtual 1600 900
+      Modes "1280x720"
+      Virtual 1280 720
     EndSubSection
 EndSection
 ```
@@ -225,3 +225,4 @@ Hidden=false
 ```
 ### Убрать управление eth0 у NetworkManager'а
 В файле `/etc/NetworkManager/NetworkManager.conf` поставить `managed=false`
+> Иначе устройство будет получать два IP-адресу по DHCP.

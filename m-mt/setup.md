@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-06-06T11:30:09.722Z
+date: 2022-06-06T11:30:30.500Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -126,7 +126,6 @@ iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080 && \
 iptables -t nat -A POSTROUTING -p tcp --sport 8080 -j SNAT --to-source :80 && \
 iptables-save > /etc/iptables/rules.v4
 ```
-
 
 # Установка SpRecord и Firebird
 ## Firebird

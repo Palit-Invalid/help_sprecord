@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-06-07T09:40:00.912Z
+date: 2022-06-07T11:34:31.787Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -231,4 +231,8 @@ Hidden=false
 ```
 ### Убрать управление eth0 у NetworkManager'а
 В файле `/etc/NetworkManager/NetworkManager.conf` поставить `managed=false`
+Выполнить команду
+```
+nmcli dev set eth0 managed yes
+```
 > Иначе устройство будет получать два IP-адреса по DHCP.

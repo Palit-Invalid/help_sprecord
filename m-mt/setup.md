@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-06-07T11:34:31.787Z
+date: 2022-06-07T11:46:47.989Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -233,6 +233,7 @@ Hidden=false
 В файле `/etc/NetworkManager/NetworkManager.conf` поставить `managed=false`
 Выполнить команду
 ```
-nmcli dev set eth0 managed yes
+nmcli dev set eth0 managed yes && \
+/home/sprecord/bin/iface.sh 0
 ```
 > Иначе устройство будет получать два IP-адреса по DHCP.

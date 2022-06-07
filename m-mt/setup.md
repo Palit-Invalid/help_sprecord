@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-06-07T09:34:15.463Z
+date: 2022-06-07T09:37:32.010Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -127,7 +127,7 @@ iptables -t nat -A POSTROUTING -p tcp --sport 8080 -j SNAT --to-source :80 && \
 iptables-save > /etc/iptables/rules.v4
 ```
 
-## Сервисы по управлению GPIO
+## Сервисы по управлению GPIO (только для NanoPI)
 ```
 wget sprecord.ru/files/downloads/linux/native/mt/gpio-tools.deb
 apt install ./gpio-tools.deb

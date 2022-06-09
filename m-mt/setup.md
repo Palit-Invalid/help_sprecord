@@ -2,7 +2,7 @@
 title: Настройка МТ
 description: 
 published: true
-date: 2022-06-07T11:46:47.989Z
+date: 2022-06-09T04:42:51.368Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-31T06:40:13.318Z
@@ -177,7 +177,7 @@ chmod +x /home/sprecord/bin/*
 ```
 Всё недостающее можно установить запустив скрипт обновления sprecord'а:
 ```
-/home/sprecord/bin/update_sprecord.sh
+/home/sprecord/bin/update-sprecord.sh
 ```
 Создать директории и файлы с необходимыми правами:
 ```

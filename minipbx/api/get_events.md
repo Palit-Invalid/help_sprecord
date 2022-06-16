@@ -2,7 +2,7 @@
 title: Получение событый
 description: 
 published: true
-date: 2021-04-06T14:49:28.750Z
+date: 2022-06-16T09:29:37.084Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:49:24.910Z

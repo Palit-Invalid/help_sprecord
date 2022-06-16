@@ -2,8 +2,8 @@
 title: Настройка времени
 description: 
 published: true
-date: 2022-06-09T08:39:24.454Z
-tags: 
+date: 2022-06-16T06:29:07.164Z
+tags: время, дата, часовой пояс
 editor: markdown
 dateCreated: 2022-05-27T04:32:15.531Z
 ---

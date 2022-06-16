@@ -1,8 +1,8 @@
 ---
 title: Настройка сценариев
-description: 
+description: Описание сценариев и пример использования
 published: true
-date: 2021-04-06T15:38:19.455Z
+date: 2022-06-16T12:08:50.795Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T15:38:15.805Z

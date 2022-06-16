@@ -2,8 +2,8 @@
 title: Настройка модема
 description: 
 published: true
-date: 2022-06-16T09:03:31.652Z
-tags: модем, интернет, usb
+date: 2022-06-16T09:46:35.446Z
+tags: модем, интернет, usb, 3g
 editor: markdown
 dateCreated: 2021-06-01T07:36:15.810Z
 ---

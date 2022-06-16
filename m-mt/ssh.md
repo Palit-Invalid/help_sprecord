@@ -2,8 +2,8 @@
 title: Подключение по SSH
 description: 
 published: true
-date: 2022-06-16T09:22:05.294Z
-tags: ssh
+date: 2022-06-16T09:22:50.778Z
+tags: ssh, putty, подключение, root
 editor: markdown
 dateCreated: 2022-05-27T05:01:58.023Z
 ---

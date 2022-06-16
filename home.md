@@ -2,7 +2,7 @@
 title: База знаний SpRecord
 description: 
 published: true
-date: 2022-05-19T12:02:04.649Z
+date: 2022-06-16T04:24:15.329Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -26,8 +26,8 @@ dateCreated: 2021-04-06T14:34:39.273Z
 - [Облачный сервис](https://sprecord.com){target=_blank}
 {.links-list}
 
-# Мониторинг состояния устройств при помощи Zabbix
-- [Добавление устройства в систему мониторинга](./monitoring/add)
+# SpRecord M/MT
+- [Подключение и настройка модемоа](./modem)
 - [Проверка доступности по сети](./monitoring/icmp)
 - [Проверка работы веб-интерфейса](./monitoring/web)
 - [Мониторинг SpRecord M/MT на основе шаблона](./monitoring/mt)

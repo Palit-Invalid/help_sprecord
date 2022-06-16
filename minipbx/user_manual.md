@@ -1,8 +1,8 @@
 ---
 title: Руководство пользователя
-description: 
+description: Детальная настройка SpRecord miniPBX
 published: true
-date: 2021-11-15T10:44:28.973Z
+date: 2022-06-16T12:47:58.482Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T15:30:08.212Z

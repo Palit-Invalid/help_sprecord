@@ -1,8 +1,8 @@
 ---
 title: Команды для модема Huawei E1550
 description: 
-published: true
-date: 2021-12-28T11:00:41.809Z
+published: false
+date: 2022-06-16T06:32:25.888Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-08T07:34:56.558Z

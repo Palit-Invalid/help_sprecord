@@ -2,7 +2,7 @@
 title: База знаний SpRecord
 description: 
 published: true
-date: 2022-06-16T04:24:15.329Z
+date: 2022-06-16T04:24:36.969Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -27,7 +27,7 @@ dateCreated: 2021-04-06T14:34:39.273Z
 {.links-list}
 
 # SpRecord M/MT
-- [Подключение и настройка модемоа](./modem)
+- [Подключение и настройка модемоа](./m-mt/modem)
 - [Проверка доступности по сети](./monitoring/icmp)
 - [Проверка работы веб-интерфейса](./monitoring/web)
 - [Мониторинг SpRecord M/MT на основе шаблона](./monitoring/mt)

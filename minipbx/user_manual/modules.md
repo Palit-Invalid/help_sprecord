@@ -2,7 +2,7 @@
 title: Модули сценариев
 description: 
 published: true
-date: 2022-06-16T07:30:33.618Z
+date: 2022-06-16T07:33:44.242Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T15:35:33.372Z
@@ -33,8 +33,8 @@ dateCreated: 2021-04-06T15:35:33.372Z
 ![telegram.png](/minipbx/icons/telegram.png) | Отправить уведомление в Telegram | Отправка оповещения о звонке через Telegram
 ![pause.png](/minipbx/icons/pause.png) | Пауза | Приостановить выполнение сценария на выбранное время
 ![fill_result.png](/minipbx/icons/fill_result.png) | Отметка в базе данных | Оставить сообщение какому-либо пользователю
-![number_change.png](/minipbx/icons/number_change.png) | Модификация номера звонящего абонента | Позволяет изменить номер звонящего
-![hangup_32p.png](/minipbx/icons/hangup_32p.png =60%x) | Завершить соединение | Положить трубку
+![number_change.png](/minipbx/icons/number_change.png =x60) | Модификация номера звонящего абонента | Позволяет изменить номер звонящего
+![hangup_32p.png](/minipbx/icons/hangup_32p.png =x60) | Завершить соединение | Положить трубку
 ![process_128p.png](/minipbx/icons/process_128p.png =x60) | Выполнить | Позволяет запустить рассылку СМС или автообзвон
 ![input_number_36p.png](/minipbx/icons/input_number_36p.png =x60) | Ввод данных | Запросить ввод данных от пользователя
 ![play_x_32p.png](/minipbx/icons/play_x_32p.png =x60) | Озвучить значение переменной | Озвучить ранее введённые данные

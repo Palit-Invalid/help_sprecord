@@ -2,13 +2,13 @@
 title: База знаний SpRecord
 description: 
 published: true
-date: 2022-06-16T11:25:05.049Z
+date: 2022-06-16T11:56:57.980Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
 ---
 
-# miniPBX
+# SpRecord miniPBX
 
 - [![start](/close_book.svg =25x25){.align-left}Быстрый старт *Краткое описание первоначальной настройки*](./minipbx/quick_start)
 - [![all](/open_book.svg =25x25){.align-left}Руководство пользователя](./minipbx/user_manual)

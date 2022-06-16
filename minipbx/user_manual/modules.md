@@ -2,7 +2,7 @@
 title: Модули сценариев
 description: 
 published: true
-date: 2022-06-16T07:33:44.242Z
+date: 2022-06-16T07:45:02.911Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T15:35:33.372Z
@@ -30,7 +30,7 @@ dateCreated: 2021-04-06T15:35:33.372Z
 ![filter_num.png](/minipbx/icons/filter_num.png) | Фильтр номера вызываемого абонента | Позволяет разделить звонки к разным абонентам
 ![email.png](/minipbx/icons/email.png) | [Отправить E-mail](/minipbx/user_manual/modules/send_email) | Отправить уведомление по E-mail
 ![sms.png](/minipbx/icons/sms.png) | Отправить SMS | Отправка уведомление о звонке через модем
-![telegram.png](/minipbx/icons/telegram.png) | Отправить уведомление в Telegram | Отправка оповещения о звонке через Telegram
+![telegram.png](/minipbx/icons/telegram.png) | [Отправить уведомление в Telegram](/minipbx/user_manual/modules/send_telegram) | Отправка оповещения о звонке через Telegram
 ![pause.png](/minipbx/icons/pause.png) | Пауза | Приостановить выполнение сценария на выбранное время
 ![fill_result.png](/minipbx/icons/fill_result.png) | Отметка в базе данных | Оставить сообщение какому-либо пользователю
 ![number_change.png](/minipbx/icons/number_change.png =x60) | Модификация номера звонящего абонента | Позволяет изменить номер звонящего

@@ -2,7 +2,7 @@
 title: Добавление устройства в систему мониторинга
 description: Как добавить устройство SpRecord в систему Zabbix
 published: true
-date: 2022-06-16T04:21:12.122Z
+date: 2022-06-16T14:30:56.519Z
 tags: sprecord zabbix мониторинг
 editor: markdown
 dateCreated: 2021-12-29T05:28:36.428Z

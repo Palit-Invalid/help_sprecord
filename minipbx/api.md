@@ -1,8 +1,8 @@
 ---
-title: Получение событый
+title: API
 description: 
 published: true
-date: 2022-06-16T09:30:53.341Z
+date: 2022-06-16T09:31:37.892Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:49:24.910Z

@@ -2,7 +2,7 @@
 title: Модули сценариев
 description: 
 published: true
-date: 2022-06-16T07:22:08.399Z
+date: 2022-06-16T07:26:05.692Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T15:35:33.372Z
@@ -35,11 +35,11 @@ dateCreated: 2021-04-06T15:35:33.372Z
 ![fill_result.png](/minipbx/icons/fill_result.png) | Отметка в базе данных | Оставить сообщение какому-либо пользователю
 ![number_change.png](/minipbx/icons/number_change.png) | Модификация номера звонящего абонента | Позволяет изменить номер звонящего
 ![hangup_32p.png](/minipbx/icons/hangup_32p.png =75%x) | Завершить соединение | Положить трубку
-![process_128p.png](/minipbx/icons/process_128p.png) | Выполнить | Позволяет запустить рассылку СМС или автообзвон
-![input_number_36p.png](/minipbx/icons/input_number_36p.png) | Ввод данных | Запросить ввод данных от пользователя
-![play_x_32p.png](/minipbx/icons/play_x_32p.png) | Озвучить значение переменной | Озвучить ранее введённые данные
-![fill_table.png](/minipbx/icons/fill_table.png) | Занести значения переменных в таблицу | Занесение значений одной или нескольких переменных в таблицу
-![http_64p.png](/minipbx/icons/http_64p.png) | http-запрос | Выполнить HTTP-запрос
-![var_action_64p.png](/minipbx/icons/var_action_64p.png) | Действие над переменной | Выполнить какое-либо действие над переменной. Доступные действия: присвоить, прибавить, вычесть, объединить строки
-![var_cmp_64p.png](/minipbx/icons/var_cmp_64p.png) | Сравнение переменной | Сравнить переменную и в зависимости от результата передать управлению в ту или иную ветку сценария
-![bitrix.png](/minipbx/icons/bitrix.png) | Битрикс24 | Отправить данные в Битрикс24
+![process_128p.png](/minipbx/icons/process_128p.png =x40) | Выполнить | Позволяет запустить рассылку СМС или автообзвон
+![input_number_36p.png](/minipbx/icons/input_number_36p.png =x40) | Ввод данных | Запросить ввод данных от пользователя
+![play_x_32p.png](/minipbx/icons/play_x_32p.png =x40) | Озвучить значение переменной | Озвучить ранее введённые данные
+![fill_table.png](/minipbx/icons/fill_table.png =x40) | Занести значения переменных в таблицу | Занесение значений одной или нескольких переменных в таблицу
+![http_64p.png](/minipbx/icons/http_64p.png =x40) | http-запрос | Выполнить HTTP-запрос
+![var_action_64p.png](/minipbx/icons/var_action_64p.png =x40) | Действие над переменной | Выполнить какое-либо действие над переменной. Доступные действия: присвоить, прибавить, вычесть, объединить строки
+![var_cmp_64p.png](/minipbx/icons/var_cmp_64p.png =x40) | Сравнение переменной | Сравнить переменную и в зависимости от результата передать управлению в ту или иную ветку сценария
+![bitrix.png](/minipbx/icons/bitrix.png =x30) | Битрикс24 | Отправить данные в Битрикс24

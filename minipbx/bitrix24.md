@@ -2,8 +2,8 @@
 title: Интеграция с Битрикс24
 description: Настройка связки SpRecord MiniPBX и CRM Битрикс24
 published: true
-date: 2022-06-16T06:30:14.344Z
-tags: minipbx, bitrix, битрикс
+date: 2022-06-16T09:40:24.322Z
+tags: minipbx, bitrix, битрикс, интеграция, crm
 editor: markdown
 dateCreated: 2022-05-19T10:15:37.848Z
 ---

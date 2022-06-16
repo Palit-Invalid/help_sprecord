@@ -2,7 +2,7 @@
 title: База знаний SpRecord
 description: 
 published: true
-date: 2022-06-16T05:26:10.894Z
+date: 2022-06-16T08:16:21.009Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -10,7 +10,7 @@ dateCreated: 2021-04-06T14:34:39.273Z
 
 # miniPBX
 
-- [![start](/close_book.svg =25x25){.align-left}Быстрый старт](./minipbx/quick_start)
+- [![start](/close_book.svg =25x25){.align-left}Быстрый старт *Краткое описание первоначальной настройки*](./minipbx/quick_start)
 - [![all](/open_book.svg =25x25){.align-left}Руководство пользователя](./minipbx/user_manual)
 - [![logging.svg](/logging.svg =25x25){.align-left}API *Документаця по API для разработчиков*](./minipbx/api)
 - [![pc.png](/pc.png =x30){.align-left}Установка на компьютер *Процесс установки АТС на компьютер.*](./minipbx/soft)

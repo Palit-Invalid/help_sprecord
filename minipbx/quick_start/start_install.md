@@ -1,8 +1,8 @@
 ---
 title: Начальная установка
-description: 
+description: Первые шаги для подключения к miniPBX
 published: true
-date: 2021-04-06T14:55:48.189Z
+date: 2022-06-16T11:56:28.159Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:55:44.514Z

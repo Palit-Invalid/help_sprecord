@@ -2,8 +2,8 @@
 title: Мониторинг
 description: 
 published: true
-date: 2022-06-16T04:22:58.936Z
-tags: 
+date: 2022-06-16T06:29:53.406Z
+tags: zabbix, заббикс, мониторинг
 editor: markdown
 dateCreated: 2022-06-16T04:22:58.936Z
 ---

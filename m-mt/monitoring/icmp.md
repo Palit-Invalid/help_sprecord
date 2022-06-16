@@ -2,7 +2,7 @@
 title: Проверка доступности устройства SpRecord по сети
 description: Добавление проверки ICMP Ping в Zabbix
 published: true
-date: 2022-06-16T04:21:31.250Z
+date: 2022-06-16T14:29:59.362Z
 tags: sprecord zabbix мониторинг
 editor: markdown
 dateCreated: 2021-12-29T05:54:40.691Z

@@ -2,7 +2,7 @@
 title: Модули сценариев
 description: 
 published: true
-date: 2022-06-16T07:27:51.629Z
+date: 2022-06-16T07:30:33.618Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T15:35:33.372Z
@@ -28,9 +28,9 @@ dateCreated: 2021-04-06T15:35:33.372Z
 ![trunk_b.png](/minipbx/icons/trunk_b.png) | Фильтр внешних линий | Позволяет разделить линии на несколько групп для выполнения сценария для каждой линии отдельно
 ![filter_num.png](/minipbx/icons/filter_num.png) | Фильтр номера звонящего абонента | Позволяет разделить звонки от разных абонентов
 ![filter_num.png](/minipbx/icons/filter_num.png) | Фильтр номера вызываемого абонента | Позволяет разделить звонки к разным абонентам
-![email.png](/minipbx/icons/email.png) | [Отправка по E-mail](/minipbx/user_manual/modules/send_email) | Отправить уведомление по E-mail
-![sms.png](/minipbx/icons/sms.png) | Отправить SMS | Отправка оповещения о звонке через модем
-![telegram.png](/minipbx/icons/telegram.png) | Отправить сообщение в Telegram | Отправка оповещения о звонке через Telegram
+![email.png](/minipbx/icons/email.png) | [Отправить E-mail](/minipbx/user_manual/modules/send_email) | Отправить уведомление по E-mail
+![sms.png](/minipbx/icons/sms.png) | Отправить SMS | Отправка уведомление о звонке через модем
+![telegram.png](/minipbx/icons/telegram.png) | Отправить уведомление в Telegram | Отправка оповещения о звонке через Telegram
 ![pause.png](/minipbx/icons/pause.png) | Пауза | Приостановить выполнение сценария на выбранное время
 ![fill_result.png](/minipbx/icons/fill_result.png) | Отметка в базе данных | Оставить сообщение какому-либо пользователю
 ![number_change.png](/minipbx/icons/number_change.png) | Модификация номера звонящего абонента | Позволяет изменить номер звонящего

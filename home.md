@@ -2,7 +2,7 @@
 title: База знаний SpRecord
 description: 
 published: true
-date: 2022-06-16T12:49:42.036Z
+date: 2022-06-16T13:57:53.212Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -18,6 +18,8 @@ dateCreated: 2021-04-06T14:34:39.273Z
 {.links-list}
 
 # SpRecord M/MT
+-	[Подключение устройства](./m-mt/connect_device)
+-	
 - [![ssh2.png](/ssh2.png =x25){.align-left}SSH *Подключение к устройству используя протокол SSH*](./m-mt/ssh)
 - [![datetime.png](/datetime.png =x25){.align-left}Дата и время *Инструкция по настройке даты и времени*](./m-mt/time)
 - [![usb-modem.png](/usb-modem.png =x30){.align-left}Модем *Подключение и настройка модема для выхода в Интернет*](./m-mt/modem)

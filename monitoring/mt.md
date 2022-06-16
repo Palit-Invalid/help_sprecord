@@ -2,7 +2,7 @@
 title: Мониторинг устройств SpRecord M/MT
 description: На основе шаблона
 published: true
-date: 2022-02-02T07:18:49.487Z
+date: 2022-06-16T04:22:06.366Z
 tags: sprecord zabbix мониторинг
 editor: markdown
 dateCreated: 2022-02-02T07:16:27.790Z

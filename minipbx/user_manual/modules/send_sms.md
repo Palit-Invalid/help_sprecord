@@ -2,7 +2,7 @@
 title: Отправка SMS
 description: 
 published: true
-date: 2022-06-16T07:56:16.203Z
+date: 2022-06-16T08:43:11.946Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-16T07:56:16.203Z
@@ -19,7 +19,6 @@ dateCreated: 2022-06-16T07:56:16.203Z
 
 ## Настройка отправки
 
-![send_sms.jpg](/minipbx/screenshots/send_sms.jpg)
 Выберите почтовый ящик, с которого будет осуществляться рассылка и адрес получателя. В тексте сообщения можете написать что угодно.
 Также в тексте можно использовать следующие переменные:
 Переменная | Значение
@@ -32,5 +31,6 @@ dateCreated: 2022-06-16T07:56:16.203Z
 `{sms_text}` | Текст СМС
 
 Пример настройки:
-![send_email.jpg](/minipbx/screenshots/send_email.jpg)
+
+![send_sms.jpg](/minipbx/screenshots/send_sms.jpg)
 

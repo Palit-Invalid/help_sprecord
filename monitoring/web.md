@@ -2,7 +2,7 @@
 title: Проверка работы веб-интерфейса
 description: Добавление проверки активности веб-интерфейса
 published: true
-date: 2022-01-11T05:41:33.534Z
+date: 2022-06-16T04:21:49.347Z
 tags: sprecord zabbix мониторинг
 editor: markdown
 dateCreated: 2021-12-29T06:50:37.472Z

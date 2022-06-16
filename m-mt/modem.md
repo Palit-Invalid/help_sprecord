@@ -2,7 +2,7 @@
 title: Настройка модема
 description: 
 published: true
-date: 2022-06-16T09:46:35.446Z
+date: 2022-06-16T11:39:44.191Z
 tags: модем, интернет, usb, 3g
 editor: markdown
 dateCreated: 2021-06-01T07:36:15.810Z
@@ -21,7 +21,7 @@ mmcli -L
 ## Настройка подключения
 Для автозаполнения можно использовать табуляцию.
 ```
-nmcli connection add ifname <tty*> autoconnect yes type gsm apn <apn> con-name <имя_соединения>
+nmcli connection add ifname <tty*> autoconnect yes con-name <имя_соединения> type gsm apn <apn> 
 nmcli connection up <имя_соединения>
 ```
 

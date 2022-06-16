@@ -2,7 +2,7 @@
 title: Мониторинг
 description: Инструкции по добавлению устройств в системы мониторинга
 published: true
-date: 2022-06-16T11:00:20.927Z
+date: 2022-06-16T14:30:06.263Z
 tags: zabbix, заббикс, мониторинг
 editor: markdown
 dateCreated: 2022-06-16T04:22:58.936Z

@@ -2,7 +2,7 @@
 title: Модули сценариев
 description: 
 published: true
-date: 2022-06-16T08:18:40.553Z
+date: 2022-06-16T08:42:30.118Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T15:35:33.372Z
@@ -29,7 +29,7 @@ dateCreated: 2021-04-06T15:35:33.372Z
 ![filter_num.png](/minipbx/icons/filter_num.png){.align-left} | Фильтр номера звонящего абонента | Позволяет разделить звонки от разных абонентов
 ![filter_num.png](/minipbx/icons/filter_num.png){.align-left} | Фильтр номера вызываемого абонента | Позволяет разделить звонки к разным абонентам
 ![email.png](/minipbx/icons/email.png){.align-left} | [Отправить E-mail](./modules/send_email) | Отправить уведомление по E-mail
-![sms.png](/minipbx/icons/sms.png){.align-left} | Отправить SMS | Отправка уведомление о звонке через модем
+![sms.png](/minipbx/icons/sms.png){.align-left} | [Отправить SMS](./modules/send_sms) | Отправка уведомление о звонке через модем
 ![telegram.png](/minipbx/icons/telegram.png){.align-left} | [Отправить уведомление в Telegram](./modules/send_telegram) | Отправка оповещения о звонке через Telegram
 ![pause.png](/minipbx/icons/pause.png){.align-left} | Пауза | Приостановить выполнение сценария на выбранное время
 ![fill_result.png](/minipbx/icons/fill_result.png){.align-left} | Отметка в базе данных | Оставить сообщение какому-либо пользователю

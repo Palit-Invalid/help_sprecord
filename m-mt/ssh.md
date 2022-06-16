@@ -2,7 +2,7 @@
 title: Подключение по SSH
 description: Инструкция по подключению к устройству через SSH
 published: true
-date: 2022-06-16T11:25:24.508Z
+date: 2022-06-16T14:33:23.883Z
 tags: ssh, putty, подключение, root
 editor: markdown
 dateCreated: 2022-05-27T05:01:58.023Z

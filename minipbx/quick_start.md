@@ -1,8 +1,8 @@
 ---
 title: Быстрый старт
-description: 
+description: Начало работы с miniPBX
 published: true
-date: 2021-04-06T14:48:21.832Z
+date: 2022-06-16T11:40:53.332Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:48:18.282Z

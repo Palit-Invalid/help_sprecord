@@ -2,56 +2,30 @@
 title: Установка SpRecord на Linux
 description: 
 published: true
-date: 2022-06-04T06:54:59.281Z
+date: 2022-06-17T10:36:44.206Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-18T10:15:43.449Z
 ---
 
 ## Поддерживаемые дистрибутивы
-- Ubuntu 16.04/18.04/20.04
-- Linux Mint 20
-- Astra Linux
+- Основанные на DEB: Ubuntu 16.04+, Debian 9+, Astra Linux и т.д
+- Основанные на RPM: CentOS 7+, Fedora и т.д.
 
-## Установка Firebird
-1. Загрузите дистрибутив.
-- Для amd64:
-```
-wget https://sprecord.ru/files/downloads/linux/native/firebirdcs_2.5.9.27139_amd64.deb -O firebird.deb
-```
-- Для arm64:
-```
-wget https://sprecord.ru/files/downloads/linux/native/firebirdcs_2.5.9.27139_arm64.deb -O firebird.deb
-```
+Для работы SpRecord'а требуется установить два пакета: firebirdcs и sprecord
 
-2. Установите дистрибутив при помощи утилиты `apt`:
-```
-sudo apt install ./firebird.deb
-```
+- | firebirdcs | sprecord
+| --- | --- | --- |
+| deb | [Ссылка](https://sprecord.ru/files/downloads/linux/native/firebirdcs_2.5.9.27139_amd64.deb) | [Ссылка](https://sprecord.ru/files/downloads/linux/native/sprecord_1.2.0-151_amd64.deb) |
+| rpm | [Ссылка](https://sprecord.ru/files/downloads/linux/native/firebirdcs-2.5.9.27139.x86_64.rpm) | [Ссылка](https://sprecord.ru/files/downloads/linux/native/sprecord-1.2.0_151.x86_64.rpm) |
 
-3. Убедитесь, что служба `firebird-cs` запустилась:
+Загрузите нужные пакеты и запустите установку. На deb дистрибутивах установку можно запустить командой:
 ```
-systemctl status firebird-cs
+apt install <путь_к_файлу>
 ```
-Если нет, то запустите вручную:
+На rpm
 ```
-systemctl enable --now firebird-cs
+yum install <путь_к_файлу>
 ```
 
-## Установка SpRecord
-1. Загрузите дистрибутив.
-- Для amd64:
-```
-wget https://sprecord.ru/files/downloads/linux/native/sprecord_1.2.0-151_amd64.deb -O sprecord.deb
-```
-- Для arm64
-```
-wget https://sprecord.ru/files/downloads/linux/native/sprecord_1.2.0-138_arm64.deb -O sprecord.deb
-```
-
-2. Запустите установку при помощи `apt`:
-```
-sudo apt install ./sprecord.deb
-````
-
-3. Запуск осуществляется при помощи команды "sprecord" либо из меню приложений.
+Запуск осуществляется при помощи команды "sprecord" либо из меню приложений.

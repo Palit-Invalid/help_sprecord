@@ -2,7 +2,7 @@
 title: База знаний SpRecord
 description: 
 published: true
-date: 2022-06-17T05:01:40.360Z
+date: 2022-06-17T05:45:15.098Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -18,8 +18,8 @@ dateCreated: 2021-04-06T14:34:39.273Z
 {.links-list}
 
 # SpRecord M/MT
--	[Первый старт](./m-mt/first_start)
--	[Управление](./m-mt/management)
+-	[![power-on.png](/power-on.png =x25){.align-left}Первый старт *Включение устройства*](./m-mt/first_start)
+-	[![management.png](/management.png =x30){.align-left}Управление](./m-mt/management)
 -	[Дополнительные настройки *Информация для разработчиков и администраторов*](./m-mt/additional_settings)
 {.links-list}
 

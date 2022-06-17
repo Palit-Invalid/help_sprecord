@@ -2,7 +2,7 @@
 title: Описание API устройств записи SpRecord M/MT
 description: Список функций и передаваемых параметров
 published: true
-date: 2022-06-16T14:25:59.259Z
+date: 2022-06-17T05:50:13.673Z
 tags: sprecord mt, api
 editor: markdown
 dateCreated: 2022-06-16T10:03:23.357Z

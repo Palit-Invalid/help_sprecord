@@ -2,7 +2,7 @@
 title: База знаний SpRecord
 description: 
 published: true
-date: 2022-06-17T08:49:31.796Z
+date: 2022-06-17T10:22:48.808Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -22,7 +22,10 @@ dateCreated: 2021-04-06T14:34:39.273Z
 -	[![filter.png](/m-mt/filter.png =x30){.align-left}Управление *Основные настройки*](./m-mt/management)
 -	[![management.png](/management.png =x30){.align-left}Дополнительные настройки *Информация для администраторов*](./m-mt/additional_settings)
 - [![hammer.png](/m-mt/hammer.png =x25){.align-left}Восстановление *Возврат к заводским насройкам после сбоя*](./m-mt/repair)
-{.links-list}
 - [![develop.png](/develop.png =x25){.align-left}API *Документация для разработчиков*](./m-mt/api)
+{.links-list}
+
+# SpRecord A/AT/TT
+-	[![linux.png](/m-mt/linux.png =x25){.align-left}Установка на Linux *Пошаговая установка на Linux-дистрибутивы*](./m-mt/first_start)
 {.links-list}
 

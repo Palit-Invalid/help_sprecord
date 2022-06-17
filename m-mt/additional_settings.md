@@ -2,7 +2,7 @@
 title: Дополнительные настройка SpRecord M/MT
 description: 
 published: true
-date: 2022-06-17T06:06:33.277Z
+date: 2022-06-17T06:07:00.351Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-16T14:24:12.514Z
@@ -17,5 +17,5 @@ dateCreated: 2022-06-16T14:24:12.514Z
 # Альтернативные способы подключения
 - [![ssh2.png](/ssh2.png =x25){.align-left}SSH *Подключение к терминалу*](./additional_settings/ssh)
 - [![ssh2.png](/ssh2.png =x25){.align-left}VNC *Удалённый рабочий стол*](./additional_settings/vnc)
-- [![ssh2.png](/ssh2.png =x25){.align-left}SFTP *Протокол передачи файлов*](./additional_settings/ssh)
+- [![ssh2.png](/ssh2.png =x25){.align-left}SFTP *Протокол передачи файлов*](./additional_settings/sftp)
 {.links-list}

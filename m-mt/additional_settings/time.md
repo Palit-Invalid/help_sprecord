@@ -2,11 +2,20 @@
 title: Настройка даты и времени
 description: Ручная настройка и через NTP
 published: true
-date: 2022-06-16T14:27:41.819Z
+date: 2022-06-17T10:51:17.015Z
 tags: время, дата, часовой пояс
 editor: markdown
 dateCreated: 2022-05-27T04:32:15.531Z
 ---
+
+# Ручная настройка времени
+1. Подключитесь через SSH к устройству (реквизиты - root/orangepi)
+2. Выполните по порядку следующие команды:
+ - `systemctl disable --now ntp`
+ - `timedatectl set-ntp false`
+ - `timedatectl set-time "yyyy-MM-dd hh:mm:ss"` (подставьте нужные значения)
+3. Установите нулевое смещение в настройках SpRecord'а:
+![time.jpg](/m-mt/time.jpg)
 
 # Настройка времени через NTP
 1. Подключитесь через [SSH](/ru/m-mt/ssh) к устройству.
@@ -14,8 +23,8 @@ dateCreated: 2022-05-27T04:32:15.531Z
 3. Вам надо найти файл `/etc/systemd/timesyncd.conf` и открыть его на редактирование (кнопка F4). При открытии в первый раз коммандер может спросить, какой редактор использовать - выбирайте mcedit.
 4. После открытия файла найдите в нём строки, начинающиеся на `#NTP=...`, и раскомментируйте (уберите в начале строки символ #).
 5. Добавьте строку такого вида:
-NTP=ntp_server_hostname_1
-где ntp_server_hostname_1 - это IP-адрес, имеющегося у вас сервера NTP.
+`NTP=ntp_server_hostname_1`
+где `ntp_server_hostname_1` - это IP-адрес, имеющегося у вас сервера NTP.
 6. Сохраните файл, нажав F2.
 7. Закройте коммандер, нажав F10.
 8. Перезапустите службу NTP, выполнив команду `chmod a-x /usr/sbin/ntpd && systemctl restart systemd-timesyncd`
@@ -23,13 +32,3 @@ NTP=ntp_server_hostname_1
 
 > Все параметры для конфигурационного файла можно найти [здесь](https://www.freedesktop.org/software/systemd/man/timesyncd.conf.html#)
 {.is-info}
-
-
-# Ручная настройка времени
-1. Подключитесь через SSH к устройству (реквизиты - root/orangepi)
-2. Выполните по порядку следующие команды:
- - systemctl disable --now ntp
- - timedatectl set-ntp false
- - timedatectl set-time "yyyy-MM-dd hh:mm:ss" (подставьте нужные значения)
-3. Установите нулевое смещение в настройках SpRecord'а:
-![time.jpg](/m-mt/time.jpg)

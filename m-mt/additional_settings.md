@@ -2,7 +2,7 @@
 title: Дополнительные настройка SpRecord M/MT
 description: 
 published: true
-date: 2022-06-17T06:33:20.571Z
+date: 2022-06-17T07:15:25.883Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-16T14:24:12.514Z
@@ -21,4 +21,3 @@ dateCreated: 2022-06-16T14:24:12.514Z
 - [![responsive.png](/m-mt/responsive.png =x30){.align-left}VNC *Удалённый рабочий стол*](./additional_settings/vnc)
 - [![data-synchronization.png](/m-mt/data-synchronization.png =x30){.align-left}SFTP *Протокол передачи файлов*](./additional_settings/sftp)
 {.links-list}
-

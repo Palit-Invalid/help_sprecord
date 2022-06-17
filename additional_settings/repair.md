@@ -2,7 +2,7 @@
 title: Восстановление работоспособности после сбоя 
 description: Возврат к заводскому состоянию
 published: true
-date: 2022-06-17T07:50:20.179Z
+date: 2022-06-17T08:47:43.876Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-17T07:37:45.129Z

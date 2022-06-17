@@ -2,14 +2,14 @@
 title: Настройка даты и времени
 description: Ручная настройка и через NTP
 published: true
-date: 2022-06-17T10:51:17.015Z
+date: 2022-06-17T12:05:32.550Z
 tags: время, дата, часовой пояс
 editor: markdown
 dateCreated: 2022-05-27T04:32:15.531Z
 ---
 
 # Ручная настройка времени
-1. Подключитесь через SSH к устройству (реквизиты - root/orangepi)
+1. Подключитесь через [SSH](./ssh) к устройству (реквизиты - root/orangepi)
 2. Выполните по порядку следующие команды:
  - `systemctl disable --now ntp`
  - `timedatectl set-ntp false`

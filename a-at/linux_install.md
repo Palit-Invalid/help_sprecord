@@ -2,7 +2,7 @@
 title: Установка SpRecord на Linux
 description: 
 published: true
-date: 2022-06-17T10:47:17.204Z
+date: 2022-06-17T11:02:37.760Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-18T10:15:43.449Z
@@ -33,6 +33,8 @@ yum install <путь_к_файлу>
 {.is-warning}
 
 Запуск осуществляется при помощи команды "sprecord" либо из меню приложений.
+
+# Техническая поддержка
 
 > Для получения версии программы для компьютеров с процессорами ARM64 обращайтесь в техническую поддержку: `support@sprecord.ru`
 {.is-info}

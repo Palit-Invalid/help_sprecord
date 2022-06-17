@@ -2,7 +2,7 @@
 title: База знаний SpRecord
 description: 
 published: true
-date: 2022-06-16T14:22:38.537Z
+date: 2022-06-17T04:51:44.574Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -18,8 +18,7 @@ dateCreated: 2021-04-06T14:34:39.273Z
 {.links-list}
 
 # SpRecord M/MT
--	[Подключение устройства](./m-mt/connect_device)
--	[Определение IP-адреса](./m-mt/ip_detect)
+-	[Первый старт](./m-mt/first_start)
 -	[Работа с устройством](./m-mt/working)
 -	[Альтернативные способы подключения](./m-mt/alternative_connects)
 -	[Дополнительные настройки *Информация для разработчиков и администраторов*](./m-mt/additional_settings)

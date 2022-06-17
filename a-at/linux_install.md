@@ -2,14 +2,14 @@
 title: Установка SpRecord на Linux
 description: 
 published: true
-date: 2022-06-17T10:46:33.330Z
+date: 2022-06-17T10:46:48.655Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-18T10:15:43.449Z
 ---
 
 ## Поддерживаемые дистрибутивы
-- Основанные на DEB: Ubuntu 16.04+, Debian 9+, Astra Linux и т.д
+- Основанные на DEB: Ubuntu 16.04+, Debian 8+, Astra Linux и т.д
 - Основанные на RPM: CentOS 7+, Fedora и т.д.
 
 Для работы SpRecord'а требуется установить два пакета: firebirdcs и sprecord

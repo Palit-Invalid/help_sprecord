@@ -2,7 +2,7 @@
 title: База знаний SpRecord
 description: 
 published: true
-date: 2022-06-17T10:24:34.864Z
+date: 2022-06-17T10:39:18.256Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -26,6 +26,6 @@ dateCreated: 2021-04-06T14:34:39.273Z
 {.links-list}
 
 # SpRecord A/AT/TT
--	[![linux.png](/m-mt/linux.png =x25){.align-left}Установка на Linux *Пошаговая установка на Linux-дистрибутивы*](./sprecord/linux_install)
+-	[![linux.png](/m-mt/linux.png =x25){.align-left}Установка на Linux *Пошаговая установка на Linux-дистрибутивы*](./a-at/linux_install)
 {.links-list}
 

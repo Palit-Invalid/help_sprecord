@@ -1,8 +1,8 @@
 ---
 title: Подключение к SpRecord M/MT используя протокол SFTP
-description: 
+description: Передача файлов
 published: true
-date: 2022-06-17T06:55:37.667Z
+date: 2022-06-17T09:46:15.298Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-17T06:55:37.667Z

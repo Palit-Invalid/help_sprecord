@@ -2,7 +2,7 @@
 title: База знаний
 description: Документация по продукции SpRecord
 published: true
-date: 2022-06-17T11:41:18.661Z
+date: 2022-06-17T11:46:46.004Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -33,4 +33,4 @@ dateCreated: 2021-04-06T14:34:39.273Z
 -	[![mail.png](/mail.png =x30){.align-left}SMS сервер *Централизованное хранение сообщений*](./sms/server)
 {.links-list}
 
-
+![sprecord_logo](/sprecord_logo.svg){.align-abstopright}

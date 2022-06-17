@@ -2,7 +2,7 @@
 title: Настройка даты и времени
 description: Ручная настройка и через NTP
 published: true
-date: 2022-06-17T12:10:20.925Z
+date: 2022-06-17T12:10:34.202Z
 tags: время, дата, часовой пояс
 editor: markdown
 dateCreated: 2022-05-27T04:32:15.531Z
@@ -33,5 +33,5 @@ dateCreated: 2022-05-27T04:32:15.531Z
 8. Перезапустите службу NTP, выполнив команду `chmod a-x /usr/sbin/ntpd && systemctl restart systemd-timesyncd`
 9. Проверьте, синхронизировалось ли время командой `date`.
 
-> Все параметры для конфигурационного файла можно найти [здесь](https://www.freedesktop.org/software/systemd/man/timesyncd.conf.html#)
+> Все возможны параметры для конфигурационного файла можно найти [здесь](https://www.freedesktop.org/software/systemd/man/timesyncd.conf.html#)
 {.is-info}

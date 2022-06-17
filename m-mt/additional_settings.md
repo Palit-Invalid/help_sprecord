@@ -1,8 +1,8 @@
 ---
-title: Дополнительные настройка SpRecord M/MT
+title: Дополнительные настройки SpRecord M/MT
 description: 
 published: true
-date: 2022-06-17T07:15:25.883Z
+date: 2022-06-17T07:17:16.463Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-16T14:24:12.514Z

@@ -2,7 +2,7 @@
 title: Установка miniPBX на компьютер
 description: 
 published: true
-date: 2022-06-17T11:27:52.022Z
+date: 2022-06-20T07:01:39.950Z
 tags: установка, компьютер, pc, linux
 editor: markdown
 dateCreated: 2022-03-15T12:18:37.759Z
@@ -25,14 +25,14 @@ dateCreated: 2022-03-15T12:18:37.759Z
 - netstat
 
 В Ubuntu/Debian/Astra это можно сделать командой:
-```
+```bash
 apt update && apt install -y \
 	docker.io \
 	usb-modeswitch \
 	net-tools
 ```
 В CentOS/Fedora/RedHat:
-```
+```bash
 yum install -y \
 	docker \
 	usb_modeswitch \
@@ -44,7 +44,7 @@ yum install -y \
 
 ## Установка программы
 1. Скачайте установочные [файлы](https://poladis.ru/minipbx-pc/stable/pbx.php), распакуйте архив и перейдите в директорию с распакованными файлами. Сделать это можно последовательностью команд:
-```
+```bash
 wget -c https://poladis.ru/minipbx-pc/stable/pbx.php -O - | tar -xz && cd minipbx
 ```
 2. При необходимости выполните дополнительные настройки (см. раздел «[Расширенная настройка](#advanced_setting)»). Вы можете пропустить этот шаг, программа будет установлена с настройками по умолчанию.
@@ -54,7 +54,7 @@ wget -c https://poladis.ru/minipbx-pc/stable/pbx.php -O - | tar -xz && cd minipb
 {.is-warning}
 
 4. Запустите процесс установки командой
-```
+```bash
 ./install
 ```
 После успешной установки АТС будет автоматически запущена. При этом через несколько секунд после запуска должен загореться индикатор на ключе-токене. Если индикатор не загорелся в течение 30 секунд, перейдите в раздел «Устраненние неполадок».
@@ -99,7 +99,7 @@ minipbx-uninstall
 ```
 > Все созданные во время работы АТС данные удалены не будут. Если вы ходите удалить их тоже, выполните команды (для настроек по умолчанию):
 {.is-info}
-```
+```bash
 rm -rf /etc/minipbx.cfg /usr/share/minipbx && \
 docker image rm cr.yandex/crp9f1mct0nssd2k2cic/minipbx-pc-base
 ```
@@ -151,17 +151,17 @@ description=miniPBX
 ports=80/tcp|9000/tcp|5060/udp|10000:20000/udp
 ```
 Далее выполните команду:
-```
+```bash
 ufw allow minipbx
 ```
 
 #### FirewallD
 Создание нового сервиса
-```
+```bash
 firewall-cmd --permanent --new-service=minipbx 
 ```
 Добавление портов в сервис
-```
+```bash
 firewall-cmd --permanent --service=minipbx \
 	--add-port=80/tcp \
 	--add-port=9000/tcp \
@@ -169,7 +169,7 @@ firewall-cmd --permanent --service=minipbx \
 	--add-port=10000-20000/udp
 ```  
 Перезагрузка
-```
+```bash
 firewall-cmd --reload && \
 firewall-cmd --permanent --add-service=minipbx && \
 firewall-cmd --reload 
@@ -178,10 +178,10 @@ firewall-cmd --reload
 ## Отключение
 ### Firewall {.tabset}
 #### UFW
-```
+```bash
 ufw disable
 ```
 #### FirewallD
-```
+```bash
 systemctl disable --now firewalld
 ```

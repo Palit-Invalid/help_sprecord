@@ -2,8 +2,8 @@
 title: SMS сервер
 description: Назначение и настройка программы
 published: true
-date: 2022-06-15T12:43:42.515Z
-tags: sms, рассылка
+date: 2022-06-20T12:17:35.586Z
+tags: sms, рассылка, сервер
 editor: markdown
 dateCreated: 2022-06-15T12:43:42.515Z
 ---

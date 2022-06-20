@@ -2,8 +2,8 @@
 title: API для интеграции с CRM системами и внешними программами
 description: 
 published: true
-date: 2022-06-20T06:53:56.971Z
-tags: 
+date: 2022-06-20T12:31:36.683Z
+tags: api, программирование
 editor: markdown
 dateCreated: 2021-04-06T14:49:24.910Z
 ---

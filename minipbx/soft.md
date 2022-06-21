@@ -1,8 +1,8 @@
 ---
-title: Установка miniPBX
+title: Установка miniPBX на компьютер
 description: Пошаговая инструкция по установке miniPBX на компьютер
 published: true
-date: 2022-06-21T12:32:20.571Z
+date: 2022-06-21T12:32:31.576Z
 tags: установка, компьютер, pc, linux, сервер
 editor: markdown
 dateCreated: 2022-03-15T12:18:37.759Z

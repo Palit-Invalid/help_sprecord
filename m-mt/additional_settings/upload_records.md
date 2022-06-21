@@ -1,8 +1,8 @@
 ---
-title: Выгрузку записей
+title: Выгрузка записей
 description: Инструкция по копированию записей на внешний сервер
 published: true
-date: 2022-06-17T08:59:06.099Z
+date: 2022-06-21T08:55:11.026Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-17T06:35:26.307Z

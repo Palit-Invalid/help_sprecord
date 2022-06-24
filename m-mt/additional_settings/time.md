@@ -2,8 +2,8 @@
 title: Настройка даты и времени
 description: Ручная настройка и через NTP
 published: true
-date: 2022-06-17T12:10:34.202Z
-tags: время, дата, часовой пояс
+date: 2022-06-24T08:57:38.344Z
+tags: время, дата, часовой пояс, ntp
 editor: markdown
 dateCreated: 2022-05-27T04:32:15.531Z
 ---

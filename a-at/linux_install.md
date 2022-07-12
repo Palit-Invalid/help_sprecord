@@ -2,7 +2,7 @@
 title: Установка SpRecord на Linux
 description: 
 published: true
-date: 2022-06-20T12:15:21.551Z
+date: 2022-07-12T05:51:37.065Z
 tags: установка, linux, sprecord
 editor: markdown
 dateCreated: 2022-02-18T10:15:43.449Z
@@ -33,6 +33,16 @@ yum install <путь_к_файлу>
 {.is-warning}
 
 Запуск осуществляется при помощи команды `sprecord` либо из меню приложений.
+
+# Удаление
+Загрузите нужные пакеты и запустите установку. На deb дистрибутивах установку можно запустить командой:
+```bash
+apt purge sprecord firebirdcs
+```
+На rpm
+```bash
+yum install <путь_к_файлу>
+```
 
 # Техническая поддержка
 

@@ -2,7 +2,7 @@
 title: База знаний
 description: Документация по продукции SpRecord
 published: true
-date: 2022-06-17T11:46:46.004Z
+date: 2022-07-25T12:43:40.339Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -26,7 +26,7 @@ dateCreated: 2021-04-06T14:34:39.273Z
 {.links-list}
 
 # SpRecord A/AT/TT
--	[![linux.png](/m-mt/linux.png =x25){.align-left}Установка на Linux *Пошаговая установка на Linux-дистрибутивы*](./a-at/linux_install)
+-	[![linux.png](/m-mt/linux.png =x25){.align-left}Установка на Linux *Пошаговая инструкция по установке на ОС на базе Linux*](./a-at/linux_install)
 {.links-list}
 
 # Рассылка SMS SpRobot

@@ -2,7 +2,7 @@
 title: Неверная распиновка на SpRecord TT
 description: 
 published: true
-date: 2021-04-06T15:48:28.912Z
+date: 2022-07-25T12:53:39.300Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T15:47:31.369Z

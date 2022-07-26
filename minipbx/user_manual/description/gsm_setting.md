@@ -2,7 +2,7 @@
 title: Настройки GSM
 description: 
 published: true
-date: 2021-04-06T15:41:49.092Z
+date: 2022-07-26T05:35:22.876Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T15:41:45.579Z

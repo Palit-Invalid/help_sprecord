@@ -2,14 +2,13 @@
 title: Описание настроек
 description: 
 published: true
-date: 2022-07-26T05:54:50.455Z
+date: 2022-07-26T05:59:38.699Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T15:30:56.566Z
 ---
 
-- [Настройки SIP](./description/sip_settings)
-- [Настройки GSM](./description/gsm_settings)
+- [Настройки SIP/GSM](./description/sip_gsm_settings)
 - [Внутренние номера](./description/inner_lines)
 - [Внешние линии](./description/ext_lines)
 - [Маршрутизация](./description/routing)

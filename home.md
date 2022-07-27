@@ -2,7 +2,7 @@
 title: База знаний
 description: Документация по продукции SpRecord
 published: true
-date: 2022-07-27T12:50:20.757Z
+date: 2022-07-27T12:50:49.133Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -31,7 +31,7 @@ dateCreated: 2021-04-06T14:34:39.273Z
 {.links-list}
 
 ## Альтернативные способы подключения
-- [![ssh2.png](/ssh2.png =x25){.align-left}SSH *Подключение к терминалу*](./additional_settings/ssh)
+- [![ssh2.png](/ssh2.png =x25){.align-left}SSH *Подключение к терминалу*](./m-mt/additional_settings/ssh)
 - [![responsive.png](/m-mt/responsive.png =x30){.align-left}VNC *Удалённый рабочий стол*](./m-mt/additional_settings/vnc)
 - [![data-synchronization.png](/m-mt/data-synchronization.png =x30){.align-left}SFTP *Протокол передачи файлов*](./m-mt/additional_settings/sftp)
 {.links-list}

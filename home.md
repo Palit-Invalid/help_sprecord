@@ -2,7 +2,7 @@
 title: База знаний
 description: Документация по продукции SpRecord
 published: true
-date: 2022-07-27T12:50:49.133Z
+date: 2022-08-02T07:31:41.716Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -24,7 +24,6 @@ dateCreated: 2021-04-06T14:34:39.273Z
 - [![develop.png](/develop.png =x25){.align-left}API *Документация для разработчиков*](./m-mt/api)
 {.links-list}
 ## Дополнительные настройки
-- [![datetime.png](/datetime.png =x25){.align-left}Дата и время *Инструкция по настройке даты и времени*](./m-mt/additional_settings/time)
 - [![usb-modem.png](/usb-modem.png =x30){.align-left}Модем *Подключение и настройка модема для выхода в Интернет*](./m-mt/additional_settings/modem)
 - [![monitoring.png](/monitoring.png =x25){.align-left}Мониторинг *Добавление устройства в системы мониторинга*](./m-mt/additional_settings/monitoring)
 - [![upload.png](/m-mt/upload.png =x25){.align-left}Выгрузка записей *Копирование записей на внешний сервер*](./m-mt/additional_settings/upload_records)
@@ -33,7 +32,7 @@ dateCreated: 2021-04-06T14:34:39.273Z
 ## Альтернативные способы подключения
 - [![ssh2.png](/ssh2.png =x25){.align-left}SSH *Подключение к терминалу*](./m-mt/additional_settings/ssh)
 - [![responsive.png](/m-mt/responsive.png =x30){.align-left}VNC *Удалённый рабочий стол*](./m-mt/additional_settings/vnc)
-- [![data-synchronization.png](/m-mt/data-synchronization.png =x30){.align-left}SFTP *Протокол передачи файлов*](./m-mt/additional_settings/sftp)
+- [![data-synchronization.png](/m-mt/data-synchronization.png =x30){.align-left}SFTP *Передача файлов по сети*](./m-mt/additional_settings/sftp)
 {.links-list}
 
 # SpRecord A/AT/TT

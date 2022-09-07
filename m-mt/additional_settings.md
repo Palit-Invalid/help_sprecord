@@ -2,30 +2,31 @@
 title: Дополнительные настройки
 description: 
 published: true
-date: 2022-09-07T08:32:41.382Z
+date: 2022-09-07T08:34:43.632Z
 tags: 
 editor: markdown
 dateCreated: 2022-09-07T08:32:41.382Z
 ---
 
-# Настройка через NetworkManager
-## Установка пакетов
+# Настройка модема
+## NetworkManager
+### Установка пакетов
 ```bash
 apt update && apt install ppp modemmanager && systemctl enable --now ModemManager
 ```
-## Проверка модема
+### Проверка модема
 ```bash
 mmcli -L
 ```
 Модем может появиться не сразу! Если не появился, то подождать минуту. Иногда требуется  физическое переподключение модема.
-## Настройка подключения
+### Настройка подключения
 Для автозаполнения можно использовать табуляцию.
 ```bash
 nmcli connection add ifname <tty*> autoconnect yes con-name <имя_соединения> type gsm apn <apn> 
 nmcli connection up <имя_соединения>
 ```
 
-# Настройка через Sakis3g
+## Настройка через Sakis3g
 ### Загрузка
 ``` bash
 mkdir ~/3g
@@ -38,8 +39,8 @@ sudo chmod +x sakis3g
 ```bash
 ./sakis3g --interactive
 ```
-## Umtskeeper
-### Загрузка
+
+### Загрузка Umtskeeper
 ```bash
 wget http://raw.githubusercontent.com/daladim/umtskeeper/master/umtskeeper
 chmod +x umtskeeper
@@ -56,7 +57,8 @@ echo '/home/sprecord/3g/umtskeeper --sakisoperators USBINTERFACE=0 OTHER=USBMODE
 > Данные настройки повлияют только на последующие записи. Предыдущие не будут копироваться!
 {.is-warning}
 
-# Копирование записей на сервер SpRecord
+# Настройка выгрузки записей
+## Копирование записей на сервер SpRecord
 Устройство позволяет выгружать записи на удалѐнный сервер SpRecord и просмотр записей с его помощью. Для этого необходимо установить на любой компьютер под управлением Windows программу [SpRecord](https://sprecord.ru/files/downloads/SpRecord3103USB.zip) и настроить его как сервер:
 
 ![server_setup.jpg](/m-mt/server_setup.jpg)
@@ -67,7 +69,7 @@ echo '/home/sprecord/3g/umtskeeper --sakisoperators USBINTERFACE=0 OTHER=USBMODE
 
 После этого все записи будут автоматически копироваться на сервер, с которого можно их удобно просматривать при помощи ПО SpRecord.
 
-# Копирование записей в облачный сервис [SpRecord Cloud](https://sprecord.com)
+## Копирование записей в облачный сервис [SpRecord Cloud](https://sprecord.com)
 
 Устройство позволяет автоматически выгружать записи в облачный сервис SpRecord. Для этого необходимо зарегистрироваться в облачном сервисе sprecord.com и включить опцию копирования записей в облако в настройках, указав идентификатор/токен пользователя.
 

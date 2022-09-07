@@ -2,7 +2,7 @@
 title: База знаний
 description: Документация по продукции SpRecord
 published: true
-date: 2022-09-07T08:42:43.506Z
+date: 2022-09-07T08:50:28.877Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -20,12 +20,12 @@ dateCreated: 2021-04-06T14:34:39.273Z
 # SpRecord M/MT
 -	[![power-on.png](/power-on.png =x25){.align-left}Первый старт *Включение устройства*](./m-mt/first_start)
 -	[![filter.png](/m-mt/filter.png =x30){.align-left}Управление *Основные настройки*](./m-mt/management)
+- [![usb-modem.png](/usb-modem.png =x30){.align-left}Дополнительные настройки](./m-mt/additional_settings)
+- [![responsive.png](/m-mt/responsive.png =x25){.align-left}Альтернативные способы подключения](./m-mt/alt_connect)
 - [![hammer.png](/m-mt/hammer.png =x25){.align-left}Восстановление *Восстановление доступа к устройству*](./m-mt/repair)
 - [![develop.png](/develop.png =x25){.align-left}API *Документация для разработчиков*](./m-mt/api)
-{.links-list}
-- [![usb-modem.png](/usb-modem.png =x30){.align-left}Дополнительные настройки](./m-mt/additional_settings)
 - [![monitoring.png](/monitoring.png =x25){.align-left}Мониторинг *Добавление устройства в системы мониторинга*](./m-mt/additional_settings/monitoring)
-- [![responsive.png](/m-mt/responsive.png =x25){.align-left}Альтернативные способы подключения](./m-mt/alt_connect)
+
 {.links-list}
 
 # SpRecord A/AT/TT

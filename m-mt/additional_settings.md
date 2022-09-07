@@ -2,7 +2,7 @@
 title: Дополнительные настройки
 description: 
 published: true
-date: 2022-09-07T08:34:43.632Z
+date: 2022-09-07T08:36:15.771Z
 tags: 
 editor: markdown
 dateCreated: 2022-09-07T08:32:41.382Z
@@ -10,16 +10,19 @@ dateCreated: 2022-09-07T08:32:41.382Z
 
 # Настройка модема
 ## NetworkManager
-### Установка пакетов
+1. Установка пакетов
 ```bash
 apt update && apt install ppp modemmanager && systemctl enable --now ModemManager
 ```
-### Проверка модема
+2. Проверка модема
 ```bash
 mmcli -L
 ```
-Модем может появиться не сразу! Если не появился, то подождать минуту. Иногда требуется  физическое переподключение модема.
-### Настройка подключения
+> Модем может появиться не сразу! Если не появился, то подождать минуту. Иногда требуется  физическое переподключение модема.
+{.is-warning}
+
+3. Настройка подключения
+
 Для автозаполнения можно использовать табуляцию.
 ```bash
 nmcli connection add ifname <tty*> autoconnect yes con-name <имя_соединения> type gsm apn <apn> 
@@ -27,7 +30,7 @@ nmcli connection up <имя_соединения>
 ```
 
 ## Настройка через Sakis3g
-### Загрузка
+1. Загрузка
 ``` bash
 mkdir ~/3g
 cd 3g/
@@ -35,21 +38,21 @@ wget http://sourceforge.net/projects/vim-n4n0/files/sakis3g.tar.gz
 tar -xzvf sakis3g.tar.gz
 sudo chmod +x sakis3g
 ```
-### Проверка программы в интерактивном режиме
+2. Проверка программы в интерактивном режиме
 ```bash
 ./sakis3g --interactive
 ```
 
-### Загрузка Umtskeeper
+3. Загрузка Umtskeeper
 ```bash
 wget http://raw.githubusercontent.com/daladim/umtskeeper/master/umtskeeper
 chmod +x umtskeeper
 ```
-### Проверка
+4. Проверка
 ```bash
 ./umtskeeper --sakisoperators "USBINTERFACE='0' OTHER='USBMODEM' USBMODEM='12d1:1001' APN='CUSTOM_APN' CUSTOM_APN='internet.mts.ru' APN_USER='mts' APN_PASS='mts'" --sakisswitches "--sudo --console" --devicename 'Huawei' --nat 'no'
 ```
-### Автозагрузка
+5. Автозагрузка
 ```bash
 echo '/home/sprecord/3g/umtskeeper --sakisoperators USBINTERFACE=0 OTHER=USBMODEM USBMODEM=12d1:1001 APN=CUSTOM_APN CUSTOM_APN=internet.mts.ru SIM_PIN=0000 APN_USER=mts APN_PASS=mts --sakisswitches --sudo --console --devicename Huawei --log --silent --nat no &' >> /etc/rc.local
 ```

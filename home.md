@@ -2,7 +2,7 @@
 title: База знаний
 description: Документация по продукции SpRecord
 published: true
-date: 2022-08-02T07:31:41.716Z
+date: 2022-09-07T08:42:43.506Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -23,16 +23,9 @@ dateCreated: 2021-04-06T14:34:39.273Z
 - [![hammer.png](/m-mt/hammer.png =x25){.align-left}Восстановление *Восстановление доступа к устройству*](./m-mt/repair)
 - [![develop.png](/develop.png =x25){.align-left}API *Документация для разработчиков*](./m-mt/api)
 {.links-list}
-## Дополнительные настройки
-- [![usb-modem.png](/usb-modem.png =x30){.align-left}Модем *Подключение и настройка модема для выхода в Интернет*](./m-mt/additional_settings/modem)
+- [![usb-modem.png](/usb-modem.png =x30){.align-left}Дополнительные настройки](./m-mt/additional_settings)
 - [![monitoring.png](/monitoring.png =x25){.align-left}Мониторинг *Добавление устройства в системы мониторинга*](./m-mt/additional_settings/monitoring)
-- [![upload.png](/m-mt/upload.png =x25){.align-left}Выгрузка записей *Копирование записей на внешний сервер*](./m-mt/additional_settings/upload_records)
-{.links-list}
-
-## Альтернативные способы подключения
-- [![ssh2.png](/ssh2.png =x25){.align-left}SSH *Подключение к терминалу*](./m-mt/additional_settings/ssh)
-- [![responsive.png](/m-mt/responsive.png =x30){.align-left}VNC *Удалённый рабочий стол*](./m-mt/additional_settings/vnc)
-- [![data-synchronization.png](/m-mt/data-synchronization.png =x30){.align-left}SFTP *Передача файлов по сети*](./m-mt/additional_settings/sftp)
+- [![responsive.png](/m-mt/responsive.png =x25){.align-left}Альтернативные способы подключения](./m-mt/alt_connect)
 {.links-list}
 
 # SpRecord A/AT/TT

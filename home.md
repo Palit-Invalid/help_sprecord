@@ -2,7 +2,7 @@
 title: База знаний
 description: Документация по продукции SpRecord
 published: true
-date: 2022-09-07T08:50:28.877Z
+date: 2022-09-07T08:50:37.297Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T14:34:39.273Z
@@ -25,7 +25,6 @@ dateCreated: 2021-04-06T14:34:39.273Z
 - [![hammer.png](/m-mt/hammer.png =x25){.align-left}Восстановление *Восстановление доступа к устройству*](./m-mt/repair)
 - [![develop.png](/develop.png =x25){.align-left}API *Документация для разработчиков*](./m-mt/api)
 - [![monitoring.png](/monitoring.png =x25){.align-left}Мониторинг *Добавление устройства в системы мониторинга*](./m-mt/additional_settings/monitoring)
-
 {.links-list}
 
 # SpRecord A/AT/TT

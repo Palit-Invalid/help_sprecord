@@ -2,7 +2,7 @@
 title: Восстановление доступа к устройству
 description: 
 published: true
-date: 2022-10-19T07:13:45.837Z
+date: 2022-10-19T07:14:24.063Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-17T07:37:45.129Z
@@ -26,9 +26,9 @@ dateCreated: 2022-06-17T07:37:45.129Z
 
 Образ |	Объём |	Особенности
 | :---: | :---: | :--- |
-| [Ссылка](https://sprecord.ru/files/downloads/m-mt/sprecord-mt-mic--orange-pi-zero--192-168-88-114--16gb--2022-02-03.zip) | 16 | Предустановлен статической адрес 192.168.88.114 |
-| [Ссылка](https://sprecord.ru/files/downloads/m-mt/sprecord-mt-mic--orange-pi-zero--192-168-88-114--32gb--2022-02-03.zip)	| 32	| Предустановлен статической адрес 192.168.88.114	|	 
-| [Ссылка](https://sprecord.ru/files/downloads/m-mt/sprecord-mt-mic--orange-pi-zero--192-168-88-114--64gb--2022-02-04.zip)	| 64	| Предустановлен статической адрес 192.168.88.114	|
+| [Ссылка](https://sprecord.ru/files/downloads/m-mt/sprecord-mt-mic--orange-pi-zero--192-168-88-114--16gb--2022-02-03.zip) | 16 | Предустановлен статический адрес 192.168.88.114 |
+| [Ссылка](https://sprecord.ru/files/downloads/m-mt/sprecord-mt-mic--orange-pi-zero--192-168-88-114--32gb--2022-02-03.zip)	| 32	| Предустановлен статический адрес 192.168.88.114	|	 
+| [Ссылка](https://sprecord.ru/files/downloads/m-mt/sprecord-mt-mic--orange-pi-zero--192-168-88-114--64gb--2022-02-04.zip)	| 64	| Предустановлен статический адрес 192.168.88.114	|
 
 2. Установите программу [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/)
 

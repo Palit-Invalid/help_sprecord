@@ -2,7 +2,7 @@
 title: Мониторинг устройств SpRecord с помощью Zabbix
 description: Данный раздел описывает добавление устройств SpRecord в систему мониторинга Zabbix на основе шаблонов
 published: true
-date: 2023-03-30T11:21:32.638Z
+date: 2023-04-14T10:14:55.032Z
 tags: zabbix, template
 editor: markdown
 dateCreated: 2023-03-30T11:06:29.010Z
@@ -31,7 +31,7 @@ dateCreated: 2023-03-30T11:06:29.010Z
 Шаблоны мониторинга устройств SpRecord можно скачать по следующим ссылкам:
 Шаблон |	Линейка устройств
 | :---: | :--- |
-| [Ссылка](https://sprecord.ru/files/downloads/mon/zbx_5.4_template_MT.zip) | SpRecord M/МТ |
+| [Ссылка](https://sprecord.ru/files/downloads/mon/zbx_5.4_template_MT-MIC.zip) | SpRecord M/МТ/MIC |
 | [Ссылка](https://sprecord.ru/files/downloads/mon/zbx_5.4_template_PBX.zip)	| SpRecord MiniPBX	|	 
 | [Ссылка](https://sprecord.ru/files/downloads/mon/zbx_5.4_template_resident.zip)	| SpRecord SIP Resident	|
 | [Ссылка](https://sprecord.ru/files/downloads/mon/zbx_5.4_template_micpro.zip)	| SpRecord MicPro |

@@ -1,0 +1,52 @@
+<!--
+title: Замена тонового предупреждения на ГОЛОСОВОЕ для SpRecord ISDN E1-S
+description: Замена тонового предупреждения на ГОЛОСОВОЕ для SpRecord ISDN E1-S
+published: true
+date: 2023-06-27T05:55:45.251Z
+tags: 
+editor: ckeditor
+dateCreated: 2023-06-27T05:55:45.251Z
+-->
+
+<h1><strong>Замена тонового предупреждения на ГОЛОСОВОЕ для </strong>SpRecord ISDN E1-S</h1>
+<blockquote>
+  <p>Голосовое предупреждение включается по-разному в зависимости от версии установленного программного обеспечения SpRecord. Рекомендуется установить SpRecord версии 3.98 или выше для получения дополнительного функционала адаптеров Е1. Узнать текущую версию SpRecord можно в меню "Справка"-"О программе".</p>
+</blockquote>
+<h3>Установка голосового предупреждения для SpRecord версии 3.98 и выше:</h3>
+<ul>
+  <li>Выполнить пункт меню Пуск -&gt; "Все программы" -&gt; "SpRecord3" -&gt; "Настроить SpRecord ISDN Terminals Converter". Откроется "Блокнот" с файлом конфигурации.</li>
+  <li>В открывшемся файле конфигурации изменить следующие параметры:</li>
+</ul>
+<blockquote>
+  <p>Notification_Incoming = "Voice"&nbsp;</p>
+  <p>Notification_Outgoing = "Voice"</p>
+</blockquote>
+<p>&nbsp;</p>
+<ul>
+  <li>Начиная с этой версии, для входящего и исходящего разговора можно указать разные голосовые фразы: файл "\SpRecord3\ISDN Service\Warning8000.msg" - для входящих, "\ISDN Service\Warning8000Out.msg" - для исходящих разговоров.</li>
+  <li>Сохранить изменения.</li>
+  <li>Перезапустить службу "SpRecord ISDN Terminals Converter".</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Установка голосового предупреждения для SpRecord версии 3.97 и ниже:<br>&nbsp;</h3>
+<ul>
+  <li>Зайти под учетной записью с правами администратора на том компьютере, к которому подключено устройство Е1.</li>
+  <li>Остановить службы "SpRecord ISDN Terminals Converter" и "SpRecordService".</li>
+  <li>Удалить "Службу поддержки адаптеров SpRecord ISDN E1" (меню Пуск -&gt; "SpRecord ISDN Terminals Converter" -&gt; "Uninstall SpRecord ISDN Terminals Converter").</li>
+  <li>Скачать по ссылке <a href="http://sprecord.ru/download/skachat">http://sprecord.ru/download/skachat</a> "Служба поддержки адаптеров SpRecord ISDN E1" файл вида "sritc_setup_xxx.zip" (где xxx - номер версии, начиная с 1.2.х.х и позднее), распаковать и установить.</li>
+  <li>Выполнить от имени администратора пункт меню "Пуск" -&gt; "Все программы" -&gt; "SpRecord ISDN Terminals Converter" -&gt; "Настроить SpRecord ISDN Terminals Converter".&nbsp;</li>
+  <li>Откроется "Блокнот" с файлом конфигурации.</li>
+</ul>
+<p>Изменить следующие параметры:</p>
+<blockquote>
+  <p>Включить голосовое предупреждение</p>
+  <p>Chanel_A_notification_voice = True&nbsp;</p>
+  <p>Chanel_B_notification_voice = True</p>
+</blockquote>
+<p>&nbsp;</p>
+<ul>
+  <li>Сохранить изменения.</li>
+  <li>Перезапустить службы "SpRecord ISDN Terminals Converter" и "SpRecordService". Либо переподключить адаптер.</li>
+</ul>
+<p>&nbsp;</p>
+<p><br>&nbsp;</p>

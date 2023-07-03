@@ -2,7 +2,7 @@
 title: Настройка модема
 description: 
 published: true
-date: 2022-06-20T06:54:41.294Z
+date: 2023-07-03T11:31:28.801Z
 tags: модем, интернет, usb, 3g
 editor: markdown
 dateCreated: 2021-06-01T07:36:15.810Z
@@ -50,5 +50,5 @@ chmod +x umtskeeper
 ```
 ### Автозагрузка
 ```bash
-echo '/home/sprecord/3g/umtskeeper --sakisoperators USBINTERFACE=0 OTHER=USBMODEM USBMODEM=12d1:1001 APN=CUSTOM_APN CUSTOM_APN=internet.mts.ru SIM_PIN=0000 APN_USER=mts APN_PASS=mts --sakisswitches --sudo --console --devicename Huawei --log --silent --nat no &' >> /etc/rc.local
+echo '/home/sprecord/3g/umtskeeper --sakisoperators "USBINTERFACE='0' OTHER='USBMODEM' USBMODEM='12d1:1001' APN='CUSTOM_APN' CUSTOM_APN='internet.mts.ru' SIM_PIN='0000' APN_USER='mts' APN_PASS='mts'" --sakisswitches "--sudo --console" --devicename 'Huawei' --log --silent --nat 'no' & >> /etc/rc.local
 ```

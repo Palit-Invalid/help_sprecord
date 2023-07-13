@@ -2,7 +2,7 @@
 title: API
 description: API для SpRecord SIP Resident
 published: true
-date: 2023-07-13T09:40:18.838Z
+date: 2023-07-13T10:32:27.541Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-07-13T09:24:20.455Z
@@ -183,34 +183,162 @@ dateCreated: 2023-07-13T09:24:20.455Z
         <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">SIP-идентификатор разговора</td>
       </tr>
       <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">caller_num</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">строка</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Номер вызывающей стороны</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">called_num</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">строка</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Номер вызываемой стороны</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">num</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">строка</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Номер любой из сторон. Не сочетается с параметрами caller_num и called_num</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">caller_name</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">строка</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Имя вызывающей стороны, если определено, в противном случае будет совпадать с caller_num</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">called_name</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">строка</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Имя вызываемой стороны, если определено, в противном случае будет совпадать с called_num</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">name</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">строка</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Имя любой из сторон. Не сочетается с параметрами caller_num и called_num</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" rowspan="7">status</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" rowspan="7">строка</td>
+        <td style="border-bottom:1px solid hsl(0, 0%, 0%);border-left:1px solid hsl(0, 0%, 0%);border-right:1px solid hsl(0, 0%, 0%);border-top:1px solid hsl(0, 0%, 0%);" colspan="2">Статус разговора. Возможные значения</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid hsl(0, 0%, 0%);border-left:2px solid hsl(0, 0%, 0%);border-right:2px solid hsl(0, 0%, 0%);border-top:2px solid hsl(0, 0%, 0%);">
+          <p style="text-align:center;"><strong>Значение</strong></p>
+        </td>
+        <td style="border-bottom:2px solid hsl(0, 0%, 0%);border-left:2px solid hsl(0, 0%, 0%);border-right:2px solid hsl(0, 0%, 0%);border-top:2px solid hsl(0, 0%, 0%);">
+          <p style="text-align:center;"><strong>Назначение</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid hsl(0, 0%, 0%);border-left:2px solid hsl(0, 0%, 0%);border-right:2px solid hsl(0, 0%, 0%);border-top:2px solid hsl(0, 0%, 0%);">STATUS_ANSWERED</td>
+        <td style="border-bottom:2px solid hsl(0, 0%, 0%);border-left:2px solid hsl(0, 0%, 0%);border-right:2px solid hsl(0, 0%, 0%);border-top:2px solid hsl(0, 0%, 0%);">Вызов принят</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid hsl(0, 0%, 0%);border-left:2px solid hsl(0, 0%, 0%);border-right:2px solid hsl(0, 0%, 0%);border-top:2px solid hsl(0, 0%, 0%);">STATUS_MISSED</td>
+        <td style="border-bottom:2px solid hsl(0, 0%, 0%);border-left:2px solid hsl(0, 0%, 0%);border-right:2px solid hsl(0, 0%, 0%);border-top:2px solid hsl(0, 0%, 0%);">Вызов пропущен</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid hsl(0, 0%, 0%);border-left:2px solid hsl(0, 0%, 0%);border-right:2px solid hsl(0, 0%, 0%);border-top:2px solid hsl(0, 0%, 0%);">STATUS_REJECTED</td>
+        <td style="border-bottom:2px solid hsl(0, 0%, 0%);border-left:2px solid hsl(0, 0%, 0%);border-right:2px solid hsl(0, 0%, 0%);border-top:2px solid hsl(0, 0%, 0%);">Вызов отклонен</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid hsl(0, 0%, 0%);border-left:2px solid hsl(0, 0%, 0%);border-right:2px solid hsl(0, 0%, 0%);border-top:2px solid hsl(0, 0%, 0%);">STATUS_UNKNOWN</td>
+        <td style="border-bottom:2px solid hsl(0, 0%, 0%);border-left:2px solid hsl(0, 0%, 0%);border-right:2px solid hsl(0, 0%, 0%);border-top:2px solid hsl(0, 0%, 0%);">Статус неизвестен</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid;border-left:1px solid;border-right:1px solid;border-top:1px solid;" colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">statuses</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">массив строк</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">Массив значений параметров status, не сочетается с параметром status.</td>
         <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">error</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">строка</td>
+        <td>Ошибка или предупреждение. Возможные значения.</td>
         <td>&nbsp;</td>
-        <td colspan="2">&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td colspan="2">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td colspan="2">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td colspan="2">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td colspan="2">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td colspan="2">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
       </tr>
     </tbody>
   </table>

@@ -2,7 +2,7 @@
 title: API
 description: API для SpRecord SIP Resident
 published: true
-date: 2023-07-13T11:03:26.685Z
+date: 2023-07-13T12:18:39.933Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-07-13T09:24:20.455Z
@@ -250,97 +250,276 @@ dateCreated: 2023-07-13T09:24:20.455Z
         <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Массив значений параметров status, не сочетается с параметром status.</td>
       </tr>
       <tr>
-        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">error</td>
+        <td style="border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;padding:5pt;vertical-align:top;" rowspan="12">error</td>
+        <td style="border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;padding:5pt;vertical-align:top;" rowspan="12">строка</td>
+        <td style="border-bottom:1px solid;border-left:1px solid;border-right:1px solid;border-top:1px solid;" colspan="2">Ошибка или предупреждение. Возможные значения.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">
+          <p style="text-align:center;"><strong>Значение</strong></p>
+        </td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">
+          <p style="text-align:center;"><strong>Назначение</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">ERROR_OK</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">Успешно обработано</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">ERROR_MAX_CHANNELS</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">Достигнуто ограничение по кол-ву каналов</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">ERROR_UNSUPPORTED_CODECS</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">В разговоре присутствовали неподдерживаемые&nbsp; кодеки</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">ERROR_UNABLE_TO_PROCESS</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">Ошибка обработки</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">ERROR_NO_MEDIA_DATA</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">Медиаданных не обнаружено</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">ERROR_RECORD_DISABLED</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">Запись отключена в настройках</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">ERROR_DECLINED_BY_LIST</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">Запись не произведена, т.к. абонент входит в “черный”/”белый” список</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">ERROR_RECORD_TOO_SHORT</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">Запись слишком короткая</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">ERROR_UNKNOWN</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">Неизвестная ошибка</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid;border-left:1px solid;border-right:1px solid;border-top:1px solid;" colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">errors</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">массив строк</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Массив значений параметров error, не сочетается с параметром error.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">since</td>
         <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">строка</td>
-        <td colspan="2">Ошибка или предупреждение. Возможные значения.</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Начало диапазона дат в формате “yyyy-MM-dd hh-mm-ss”</td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">until</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">строка</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Конец диапазона дат в формате “yyyy-MM-dd hh-mm-ss”</td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">duration_min</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">число</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Минимальная длительность</td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">duration_max</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">число</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Максимальная длительность</td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td style="border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;padding:5pt;vertical-align:top;" rowspan="9">order_by</td>
+        <td style="border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;padding:5pt;vertical-align:top;" rowspan="9">массив объектов</td>
+        <td style="border-bottom:1px solid;border-left:1px solid;border-right:1px solid;border-top:1px solid;" colspan="2">
+          <p>Критерии сортировки записей. Массив содержит объекты с критерием сортировки и ее направлением (asc или desc).</p>
+          <p>Пример объекта:</p>
+          <p>{“caller_num”: “asc”}</p>
+          <p>Порядок объектов в массиве имеет значение.</p>
+        </td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">
+          <p style="text-align:center;"><strong>Значение</strong></p>
+        </td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">
+          <p style="text-align:center;"><strong>Критерий сортировки</strong></p>
+        </td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">caller_num</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">По номеру вызывающей стороны</td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">called_num</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">По номеру вызываемой стороны</td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">caller_name</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">По имени вызывающей стороны</td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">called_name</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">По имени&nbsp; вызываемой стороны</td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">date</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">По дате (по умолчанию)</td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">duration</td>
+        <td style="border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top:2px solid #000000;padding:5pt;vertical-align:top;">По длительности</td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td style="border-bottom:1px solid;border-left:1px solid;border-right:1px solid;border-top:1px solid;" colspan="2">&nbsp;</td>
       </tr>
     </tbody>
   </table>
 </figure>
+<p>&nbsp;</p>
+<p>Ответ на запрос будет содержать следующее.</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td style="border-bottom:1px solid;border-left:1px solid;border-right:1px solid;border-top:1px solid;">
+          <p style="text-align:center;"><strong>Поле</strong></p>
+        </td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">
+          <p style="text-align:center;"><strong>Пояснение</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid;border-left:1px solid;border-right:1px solid;border-top:1px solid;">from</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Переданный параметр from</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid;border-left:1px solid;border-right:1px solid;border-top:1px solid;">count</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Кол-во возвращаемых элементов</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid;border-left:1px solid;border-right:1px solid;border-top:1px solid;">total_count</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;" colspan="2">Общее кол-во элементов, подходящий под заданные критерии</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid;border-left:1px solid;border-right:1px solid;border-top:1px solid;vertical-align:top;" rowspan="15">records</td>
+        <td colspan="2">Массив объектов, содержащих сведения о записях. Объекты следующие.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">
+          <p style="text-align:center;"><strong>Поле</strong></p>
+        </td>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">
+          <p style="text-align:center;"><strong>Пояснение</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">cid</td>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">Идентификатор записи</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">callid</td>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">SIP-идентификатор разговора</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">caller_num</td>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">Номер вызывающей стороны</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">called_num</td>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">Номер вызываемой стороны</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">caller_name</td>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">Имя вызывающей стороны, если определено, либо будет совпадать с caller_num</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">called_name</td>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">Имя вызываемой стороны, если определено, либо будет совпадать с called_num</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">status</td>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">Статус разговора</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">error</td>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">Ошибка или предупреждение</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">date</td>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">Дата в формате “yyyy-MM-dd hh-mm-ss”</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">duration</td>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">Длительность</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">content_type</td>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">Тип контента файла записи: “audio/wav”, “audio/mpeg”, либо пустое значение если файл отсутствует</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">size</td>
+        <td style="border-bottom:2pt solid #000000;border-left:2pt solid #000000;border-right:2pt solid #000000;border-top:2pt solid #000000;padding:5pt;vertical-align:top;">Размер файла</td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<pre><code class="language-plaintext">Пример
+Запрос:
+{
+"count": 5,
+"num": "123",
+"status": "STATUS_ANSWERED",
+"order_by": [{"duration":"desc"}, {"date":"desc"}]
+}
+Ответ:
+{
+	"data" : 
+	{
+		"count" : 2,
+		"from" : 0,
+		"records" : 
+		[
+			{
+				"called_name" : "123",
+				"called_num" : "123",
+				"caller_name" : "124",
+				"caller_num" : "124",
+				"callid" : "OpcePgxR4.4sxaXBdoezmGVPecQ08vJF",
+				"content_type" : "audio/mpeg",
+				"date" : "2016-11-30 19:47:23",
+				"duration" : 12,
+				"error" : "ERROR_OK",
+				"cid" : "2",
+				"size" : 51840,
+				"status" : "STATUS_ANSWERED"
+			},
+			{
+				"called_name" : "124",
+				"called_num" : "124",
+				"caller_name" : "Alexey",
+				"caller_num" : "123",
+				"callid" : "f048f0cd4f5d4398a4672295875aa1c9",
+				"content_type" : "",
+				"date" : "2022-12-12 16:34:08",
+				"duration" : 0,
+				"error" : "ERROR_OK",
+				"cid" : "787454545",
+				"size" : 0,
+				"status" : "STATUS_ANSWERED"
+			}
+		],
+		"total_count" : 2
+	},
+	"error" : "OK"
+}
+</code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

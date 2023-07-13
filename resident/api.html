@@ -2,7 +2,7 @@
 title: API
 description: API для SpRecord SIP Resident
 published: true
-date: 2023-07-13T12:18:39.933Z
+date: 2023-07-13T12:22:13.066Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-07-13T09:24:20.455Z
@@ -466,8 +466,8 @@ dateCreated: 2023-07-13T09:24:20.455Z
   </table>
 </figure>
 <p>&nbsp;</p>
-<pre><code class="language-plaintext">Пример
-Запрос:
+<p>Пример:</p>
+<pre><code class="language-plaintext">Запрос:
 {
 "count": 5,
 "num": "123",
@@ -517,6 +517,102 @@ dateCreated: 2023-07-13T09:24:20.455Z
 }
 </code></pre>
 <p>&nbsp;</p>
+<h2>/GetRecordFile</h2>
+<p>Получить файл записи.</p>
+<p>Возвращает файл записи, либо код HTTP 404, если файл не найден.</p>
+<figure class="table" style="float:left;">
+  <table style="border-bottom:none;border-left:none;border-right:none;border-top:none;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">
+          <p style="text-align:center;"><strong>Параметр</strong></p>
+        </td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">
+          <p style="text-align:center;"><strong>Пояснение</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">cid</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">Идентификатор записи разговора, полученный командой /GetRecordsInfo. Обязательный параметр</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Пример</h3>
+<pre><code class="language-plaintext">Запрос:
+{
+"cid" : "2"
+}
+</code></pre>
+<h2>/GetRecordFile/&lt;cid&gt;</h2>
+<p>Команда, аналогичная /GetRecordFile, но идентификатор можно передать в строке GET.</p>
+<h2>/Reboot</h2>
+<p>Перезагрузка устройства.</p>
+<h2>/Shutdown</h2>
+<p>Выключение устройства.</p>
+<h2>/Events</h2>
+<p>Получение уведомлений о разговорах через SSE (Server-Sent Events). Ответ на запрос по мере наступления событий будет дополняться. Каждое событие отделяется от другого пустой строкой. Информация о событии заключена в 3-х полях по одному на каждой строке: id - идентификатор события (порядковый номер), event - тип события, data - подробности, представленные в формате JSON. Заголовок Last-Event-ID в запросе может передать значение идентификатор последнего полученного события, это позволить получить пропущенные события (не более 100) в случае дисконнекта.</p>
+<p>Коротко об SSE можно прочитать <a href="https://learn.javascript.ru/server-sent-events"><u>здесь</u></a>. Обратите внимание, что если вы используете JavaScript для обработки событий, то необходимо подписаться на них используя метод addEventListener, а не onmessage.</p>
+<p>Определены следующие типы событий и их параметры.</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

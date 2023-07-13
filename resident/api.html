@@ -1,0 +1,127 @@
+<!--
+title: API
+description: API для SpRecord SIP Resident
+published: true
+date: 2023-07-13T09:24:20.455Z
+tags: 
+editor: ckeditor
+dateCreated: 2023-07-13T09:24:20.455Z
+-->
+
+<p style="text-align:center;"><span class="text-huge"><strong>Интерфейс прикладного программирования (API)</strong></span></p>
+<p style="text-align:center;"><span class="text-huge"><strong>для SIP Resident</strong></span></p>
+<p style="text-align:center;"><span class="text-huge">ООО «Сарапульские системы», 2023</span></p>
+<hr>
+<h1>Общие сведения</h1>
+<p>Сервер API по умолчанию работает на TCP порте 9100. Требуется его включение в настройках. Взаимодействие с сервером осуществляется при помощи HTTP-запросов. Запрос может включать дополнительные параметры, упакованные в структуру JSON. В этом случае они передаются методом POST. Ответ содержит структуру JSON, либо файл, в случае если в ответе ожидается файл.</p>
+<h2>Запрос</h2>
+<p>URI запроса выглядит следующим образом:</p>
+<p>http://&lt;<strong>ip</strong>&gt;:&lt;<strong>port</strong>&gt;/&lt;<strong>cmd</strong>&gt;</p>
+<p>где <strong>ip</strong> - адрес устройства, <strong>port</strong> - порт сервера API, <strong>cmd</strong> - команда.</p>
+<h2>Ответ</h2>
+<p>Ответ, представляющий собой структуру JSON имеет 1 обязательное поле <strong>error</strong>. Пример:</p>
+<p>{</p>
+<p>“error”: “OK”</p>
+<p>}</p>
+<p>Определены следующие возможные значения этого поля.</p>
+<figure class="table" style="float:left;">
+  <table style="border-bottom:none;border-left:none;border-right:none;border-top:none;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">
+          <p style="text-align:center;"><strong>Значение</strong></p>
+        </td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">
+          <p style="text-align:center;"><strong>Пояснение</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">OK</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">Запрос выполнен без ошибок</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">PARSE_ERROR</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">Некорректная структура JSON</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">WRONG_FUNCTION</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">Неверное название команды</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">WRONG_ARGS</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">Параметры имеют некорректный тип либо их значения выходят за границы диапазона допустимых значений</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">ARGUMENTS_REQUIRED</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">Не хватает одного или нескольких обязательных параметров</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">PROCESSING_ERROR</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;vertical-align:top;">Во время выполнения запроса произошла ошибка</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Если значением поля <strong>error</strong> не является “OK”, то ответ также будет содержать дополнительное строковое поле <strong>error_msg</strong>, которое содержит подробности возникшей ошибки.</p>
+<h1>Команды</h1>
+<h2>/GetInformation</h2>
+<p>Получение информации об устройстве.</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td style="border-bottom:solid;border-left:solid;border-right:solid;border-top:solid;"><strong>Параметр</strong></td>
+        <td style="border-bottom:solid;border-left:solid;border-right:solid;border-top:solid;" colspan="2"><strong>Пояснение</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:solid;border-left:solid;border-right:solid;border-top:solid;vertical-align:top;" rowspan="7">tags</td>
+        <td style="border-bottom:solid;border-left:solid;border-right:solid;border-top:solid;" colspan="2">Обязательный параметр. Массив строковых значений, по которым определяется какие данные необходимо получить. Возможные значения.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;">
+          <p style="text-align:center;"><strong>Значение</strong></p>
+        </td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;">
+          <p style="text-align:center;"><strong>Назначение</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;">disk_space</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;">Сведения о занятом пространстве</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;">license</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;">Сведения о лицензии и коде активации</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;">version</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;">Версия ПО</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;">date_time</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;">Текущие дата, время и часовой пояс</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;">devicemark</td>
+        <td style="border-bottom:1pt solid #000000;border-left:1pt solid #000000;border-right:1pt solid #000000;border-top:1pt solid #000000;padding:5pt;">Метка устройства</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3>Пример</h3>
+<p>Запрос:</p>
+<p>{</p>
+<p>&nbsp; &nbsp; "tags" : [ "disk_space", "license", "version", "date_time", "devicemark" ]</p>
+<p>}</p>
+<p>Ответ:</p>
+<p>{</p>
+<p>&nbsp; &nbsp; "data" :</p>
+<p>&nbsp; &nbsp; {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>

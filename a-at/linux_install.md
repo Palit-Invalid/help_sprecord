@@ -2,7 +2,7 @@
 title: Установка SpRecord на Linux
 description: 
 published: true
-date: 2023-07-14T12:05:48.108Z
+date: 2023-07-14T12:38:46.509Z
 tags: установка, linux, sprecord
 editor: markdown
 dateCreated: 2022-02-18T10:15:43.449Z

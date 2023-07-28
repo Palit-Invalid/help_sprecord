@@ -1,0 +1,36 @@
+<!--
+title: Установка ПО SpRecord Server
+description: Установка ПО SpRecord Server
+published: true
+date: 2023-07-28T06:35:26.496Z
+tags: 
+editor: ckeditor
+dateCreated: 2023-07-28T06:35:26.496Z
+-->
+
+<h1 style="text-align:center;">Установка ПО SpRecord Server</h1>
+<p style="text-align:center;">&nbsp;</p>
+<h2>Подготовительный этап</h2>
+<p>Перед установкой программного продукта SpRecord Server, необходимо выполнить установку программы для виртуализации контейнеров Docker.</p>
+<p>Установка в<strong> Debian</strong> подобных дистрибутивах (В&nbsp;<strong>Ubuntu/ Debian / Kali Linux</strong> в официальных репозиториях есть версия)</p>
+<pre><code class="language-plaintext">sudo apt install -y docker.io
+sudo systemctl enable docker --now</code></pre>
+<p>Установка Docker с помощью скрипта:</p>
+<pre><code class="language-plaintext">curl -fsSL get.docker.com | sudo sh</code></pre>
+<h2>Установка SpRecord Server</h2>
+<p>Создать папку Sprecord:</p>
+<pre><code class="language-plaintext">sudo mkdir sprecord</code></pre>
+<p>Перейти в нее:</p>
+<pre><code class="language-plaintext">cd sprecord</code></pre>
+<p>Выполнить последовательно команды:</p>
+<pre><code class="language-plaintext">sudo curl -fsSL https://sprecord.ru/files/downloads/server/run.sh -o run.sh
+sudo chmod +x ./run.sh
+sudo ./run.sh 
+</code></pre>
+<p>&nbsp;</p>
+<p>После установки открыть браузер, ввести ip адрес машины с развернутым образом Docker:</p>
+<figure class="image"><img src="/sprecordserver/sprecord_s_1.jpg"></figure>
+<p>&nbsp;</p>
+<p>Логин: admin</p>
+<p>Пароль: “без пароля”</p>
+<p>&nbsp;</p>

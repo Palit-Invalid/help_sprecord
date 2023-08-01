@@ -2,7 +2,7 @@
 title: Установка ПО SpRecord Server
 description: Установка ПО SpRecord Server
 published: true
-date: 2023-07-28T06:35:26.496Z
+date: 2023-08-01T06:13:44.063Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-07-28T06:35:26.496Z
@@ -10,6 +10,9 @@ dateCreated: 2023-07-28T06:35:26.496Z
 
 <h1 style="text-align:center;">Установка ПО SpRecord Server</h1>
 <p style="text-align:center;">&nbsp;</p>
+<p style="text-align:center;">&nbsp;</p>
+<h1>Установка под Linux</h1>
+<p>&nbsp;</p>
 <h2>Подготовительный этап</h2>
 <p>Перед установкой программного продукта SpRecord Server, необходимо выполнить установку программы для виртуализации контейнеров Docker.</p>
 <p>Установка в<strong> Debian</strong> подобных дистрибутивах (В&nbsp;<strong>Ubuntu/ Debian / Kali Linux</strong> в официальных репозиториях есть версия)</p>
@@ -33,4 +36,69 @@ sudo ./run.sh
 <p>&nbsp;</p>
 <p>Логин: admin</p>
 <p>Пароль: “без пароля”</p>
+<p>&nbsp;</p>
+<h1>Установка под Windows</h1>
+<p>&nbsp;</p>
+<h2>Подготовительный этап</h2>
+<p>Перед установкой программного продукта SpRecord Server, необходимо выполнить установку программы для виртуализации контейнеров Docker.</p>
+<p>&nbsp;</p>
+<h2><strong>Включите подсистему Windows для Linux.</strong></h2>
+<p>Откройте PowerShell <strong>от имени администратора (меню «Пуск» &gt; PowerShell &gt; щелкните правой кнопкой мыши &gt; «Запуск от имени администратора»)</strong> и введите следующую команду:</p>
+<pre><code class="language-plaintext">dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart</code></pre>
+<p>Для обновления до WSL 2 у вас должна быть установлена Windows 10...</p>
+<ul>
+  <li>Для систем x64: <strong>версия 1903</strong> или новее, <strong>сборка 18362.1049</strong> или новее.</li>
+  <li>Для систем ARM64: <strong>версия 2004</strong> или новее, <strong>сборка 19041</strong> или новее.</li>
+</ul>
+<p>или виндовс 11.</p>
+<p>Перед установкой WSL 2 необходимо включить дополнительную функцию <strong>платформы виртуальных машин</strong> . Для использования этой функции вашей машине потребуются <a href="https://learn.microsoft.com/en-us/windows/wsl/troubleshooting#error-0x80370102-the-virtual-machine-could-not-be-started-because-a-required-feature-is-not-installed">возможности виртуализации .</a></p>
+<p>Откройте PowerShell от имени администратора и выполните:</p>
+<pre><code class="language-plaintext">dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</code></pre>
+<p>&nbsp;</p>
+<p>Пакет обновления ядра Linux устанавливает самую последнюю версию <a href="https://github.com/microsoft/WSL2-Linux-Kernel">ядра Linux WSL 2</a> для запуска WSL в образе операционной системы Windows. (Чтобы запустить <a href="https://learn.microsoft.com/en-us/windows/wsl/compare-versions#wsl-in-the-microsoft-store">WSL из Microsoft Store</a> с более частыми обновлениями, используйте <code>wsl.exe --install</code>или <code>wsl.exe --update</code>.).</p>
+<p>Загрузите последний пакет:</p>
+<ul>
+  <li><a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">Пакет обновления ядра WSL2 Linux для машин x64</a></li>
+</ul>
+<blockquote>
+  <p><strong>Примечание</strong></p>
+  <p>Если вы используете машину ARM64, загрузите <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi"><strong>пакет ARM64</strong></a> . Если вы не уверены, какой у вас компьютер, откройте командную строку или PowerShell и введите: <code>systeminfo | find "System Type"</code>. <strong>Предостережение:</strong> в версиях Windows, отличных от английского, вам, возможно, придется изменить текст поиска, переведя строку «Тип системы». Вам также может понадобиться экранировать кавычки для команды find. Например, на немецком <code>systeminfo | find '"Systemtyp"'</code>.</p>
+</blockquote>
+<p>Запустите пакет обновления, загруженный на предыдущем шаге. (Дважды щелкните для запуска — вам будут предложены повышенные разрешения, выберите «да», чтобы одобрить эту установку.)</p>
+<p>&nbsp;</p>
+<p>Откройте PowerShell и выполните эту команду, чтобы установить WSL 2 в качестве версии по умолчанию при установке нового дистрибутива Linux:</p>
+<pre><code class="language-plaintext">wsl --set-default-version 2</code></pre>
+<p>&nbsp;</p>
+<p>После перезагрузите ваш компьютер.</p>
+<p>&nbsp;</p>
+<h2>Установка Docker Desktop</h2>
+<p>Скачайте дистрибутив по ссылке: <a href="https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&amp;utm_medium=webreferral&amp;utm_campaign=dd-smartbutton&amp;utm_location=module&amp;_gl=1*rpmzsq*_ga*MTgzODE1OTU4LjE2OTA0MzYyNzY.*_ga_XJWPQMJYHQ*MTY5MDg2NTY5Ny44LjEuMTY5MDg2NTY5OC41OS4wLjA.">Docker Desktop</a></p>
+<p>Запустите установку и следуйте шагам установки.</p>
+<blockquote>
+  <p>При установке выберите пункт загружаться вместе с операционной системой.</p>
+</blockquote>
+<p>Если все сделано правильно, Docker Desktop должен установиться и на рабочем столе появится значок:</p>
+<figure class="image"><img src="/sprecordserver/docker_desktop.jpg"></figure>
+<p>&nbsp;</p>
+<h2>Установка SpRecord Server</h2>
+<p>&nbsp;</p>
+<p>Создайте папку на нужном вам диске, например: SpRecord, зайдите в нее.</p>
+<p>Вызовите интерфейс “Windows Power Shell” с правами администратора: Файл - Запустить Windows Power Shell - Запустить Windows Power Shell с правами администратора.</p>
+<p>Введите команду:</p>
+<pre><code class="language-plaintext">mkdir record, data, log</code></pre>
+<p>В папке должны появиться подпапки с соответствующими именами: record, data, log.</p>
+<p>&nbsp;</p>
+<p>После введите следующую команду:</p>
+<pre><code class="language-plaintext">docker run -d --restart=always -p 80:80 -p 30000:30000 -v &lt;&lt;Путь до папки&gt;&gt;/records:/server/records -v &lt;&lt;Путь до папки&gt;&gt;/data:/server/data -v &lt;&lt;Путь до папки&gt;&gt;/logs:/server/log --name sp_viewer cr.yandex/crp9f1mct0nssd2k2cic/viewer</code></pre>
+<p>Результат должен быть такой:</p>
+<figure class="image"><img src="/sprecordserver/sprecord_s_2.jpg"></figure>
+<p>А в Docker Desktop должно выглядеть так:</p>
+<figure class="image"><img src="/sprecordserver/sprecord_s_3.jpg"></figure>
+<p>&nbsp;</p>
+<p>Для проверки что все работает откройте браузер и наберите http://localhost/ должно появиться окно входа в веб интерфейс:</p>
+<figure class="image"><img src="/sprecordserver/sprecord_s_4.jpg"></figure>
+<p>&nbsp;</p>
+<p>Логин: admin</p>
+<p>Пароль: “Без пароля”</p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>

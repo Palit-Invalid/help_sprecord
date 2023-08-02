@@ -2,7 +2,7 @@
 title: Установка ПО SpRecord Server
 description: Установка ПО SpRecord Server
 published: true
-date: 2023-08-02T05:33:05.047Z
+date: 2023-08-02T05:46:14.725Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-07-28T06:35:26.496Z
@@ -81,17 +81,11 @@ sudo ./run.sh
 <p>&nbsp;</p>
 <h2>Установка SpRecord Server</h2>
 <p>&nbsp;</p>
-<p>Создайте папку на нужном вам диске, например: SpRecord, зайдите в нее.</p>
-<p>Вызовите интерфейс “Windows Power Shell” с правами администратора: Файл - Запустить Windows Power Shell - Запустить Windows Power Shell с правами администратора.</p>
-<p>Введите команду:</p>
-<pre><code class="language-plaintext">mkdir records, data, logs</code></pre>
-<p>В папке должны появиться подпапки с соответствующими именами: record, data, log.</p>
+<p>Для установки SpRecord Server скачайте скрипт по ссылке ниже (щелкните правой кнопкой мыши по ссылке - сохранить ссылку как..):&nbsp;</p>
+<p><a href="https://sprecord.ru/files/downloads/server/run.ps1">ССЫЛКА ДЛЯ СКАЧИВАНИЯ СКРИПТА</a></p>
+<p>Сохраните скрипт на компьютер в любое место, откройте папку с сохраненным скриптом.</p>
+<p>Щелкните правой кнопкой мыши на скрипте - Выполнить с помощью PowerShell</p>
 <p>&nbsp;</p>
-<p>После введите следующую команду:</p>
-<pre><code class="language-plaintext">docker run -d --restart=always -p 80:80 -p 30000:30000 -v &lt;&lt;Путь до папки&gt;&gt;/records:/server/records -v &lt;&lt;Путь до папки&gt;&gt;/data:/server/data -v &lt;&lt;Путь до папки&gt;&gt;/logs:/server/log --name sp_viewer cr.yandex/crp9f1mct0nssd2k2cic/viewer</code></pre>
-<p>Результат должен быть такой:</p>
-<figure class="image"><img src="/sprecordserver/sprecord_s_2.jpg"></figure>
-<p>А в Docker Desktop должно выглядеть так:</p>
 <figure class="image"><img src="/sprecordserver/sprecord_s_3.jpg"></figure>
 <p>&nbsp;</p>
 <p>Для проверки что все работает откройте браузер и наберите http://localhost/ должно появиться окно входа в веб интерфейс:</p>
@@ -100,7 +94,7 @@ sudo ./run.sh
 <p>Логин: admin</p>
 <p>Пароль: “Без пароля”</p>
 <p>&nbsp;</p>
-<p><a href="https://sprecord.ru/files/downloads/server/run.ps1">скачать по ссылке&nbsp;</a></p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

@@ -2,7 +2,7 @@
 title: Восстановление доступа к устройству
 description: 
 published: true
-date: 2023-10-09T09:12:21.202Z
+date: 2023-10-13T06:58:23.508Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-17T07:37:45.129Z
@@ -22,7 +22,7 @@ dateCreated: 2022-06-17T07:37:45.129Z
 Необходимо вскрыть корпус устройства и извлечь карту памяти MicroSD. Данную карту подключить к компьютеру через кардридер и далее действовать по инструкции:
 
 1. Скачайте с нашего сайта образ:
-https://sprecord.ru/files/downloads/m-mt/armbian_5.15_ip114_29_09_2023.zip 
+https://sprecord.ru/files/downloads/m-mt/armbian_5.15_ip114_12_10_2023.zip 
 
 2. Установите программу [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/)
 

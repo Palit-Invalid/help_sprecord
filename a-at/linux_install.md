@@ -2,7 +2,7 @@
 title: Установка SpRecord на Linux
 description: 
 published: true
-date: 2023-07-14T12:38:46.509Z
+date: 2023-11-01T05:51:18.912Z
 tags: установка, linux, sprecord
 editor: markdown
 dateCreated: 2022-02-18T10:15:43.449Z
@@ -21,7 +21,7 @@ dateCreated: 2022-02-18T10:15:43.449Z
 | deb | [Ссылка](https://sprecord.ru/files/downloads/linux/native/firebirdcs_2.5.9.27139_amd64.deb) | [Ссылка](https://sprecord.ru/files/downloads/linux/native/sprecord_1.2.0.151_amd64.deb) |
 | rpm | [Ссылка](https://sprecord.ru/files/downloads/linux/native/firebirdcs-2.5.9.27139.x86_64.rpm) | [Ссылка](https://sprecord.ru/files/downloads/linux/native/sprecord-1.2.0.151.x86_64.rpm) |
 
-### Для ALt Linux необходимо скачать и установить дополнительные пакеты
+### Для ALt Linux и Astra Linux необходимо скачать и установить дополнительные пакеты
 
 http://de.archive.ubuntu.com/ubuntu/pool/universe/a/appmenu-gtk-module/appmenu-gtk2-module_0.7.3-2_amd64.deb
 http://de.archive.ubuntu.com/ubuntu/pool/universe/a/appmenu-gtk-module/appmenu-gtk-module-common_0.7.3-2_all.deb

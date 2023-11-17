@@ -1,0 +1,73 @@
+<!--
+title: API CL(IPVR)-Gate
+description: 
+published: true
+date: 2023-11-17T07:14:03.603Z
+tags: 
+editor: ckeditor
+dateCreated: 2023-11-17T07:14:03.603Z
+-->
+
+<h1 style="text-align:center;">API CL(IPVR)-Gate</h1>
+<p>&nbsp;</p>
+<p>get /api/pin_status&nbsp; - получение статуса в json</p>
+<p>get /api/relay переключение реле&nbsp; пример <a href="http://192.168.88.152/api/relay?relay=2&amp;state=0&amp;token=admin"><u>http://192.168.88.152/api/relay?relay=2&amp;state=0&amp;token=admin</u></a></p>
+<p>get /api/settings получение настроек в json</p>
+<p>post /api/settings установка настроек&nbsp; (json)</p>
+<p>put /api/number&nbsp; добавить номер</p>
+<pre><code class="language-plaintext">PUT  http://192.168.88.152/api/numbers?token=admin
+
+
+{
+    "num": "+79829932611",
+    "desc": "new_5"
+}
+</code></pre>
+<p>&nbsp;</p>
+<p>get /api/number&nbsp; получить список номеров&nbsp;</p>
+<pre><code class="language-plaintext">http://192.168.88.152/api/numbers?page=1&amp;limit=10&amp;token=admin</code></pre>
+<p>&nbsp;</p>
+<p>/api/numbers - удалить номера</p>
+<pre><code class="language-plaintext">DELETE  http://192.168.88.152/api/numbers?token=admin
+
+
+{
+    "nums": ["+79829932608"]
+}
+</code></pre>
+<p>&nbsp;</p>
+<p>post /api/cmd выполнить команду</p>
+<pre><code class="language-plaintext">reboot", "factory_reset
+</code></pre>
+<p>&nbsp;</p>
+<pre><code class="language-plaintext">POST http://192.168.88.198/api/cmd/?token=admin
+
+
+{
+    "cmd":"reboot",
+    "params": {
+        "reboot_s": 5
+    }
+}
+</code></pre>
+<p>&nbsp;</p>
+<p>get /api/pin_status получить текущие значения статусов</p>
+<pre><code class="language-plaintext">{
+  "success": true,
+  "relays": [
+    0,
+    0
+  ],
+  "inputs": [
+    0,
+    0
+  ]
+}
+</code></pre>
+<p>&nbsp;</p>
+<p>post /access_list&nbsp; загрузить csv файл с номерами. CSV файл передается в теле запроса.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

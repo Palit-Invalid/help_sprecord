@@ -2,7 +2,7 @@
 title: Восстановление доступа к устройству
 description: 
 published: true
-date: 2024-01-10T09:35:08.286Z
+date: 2024-01-26T12:45:30.782Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-17T07:37:45.129Z
@@ -30,7 +30,7 @@ IP-адрес устройства станет по умолчанию 192.168.
 Необходимо вскрыть корпус устройства и извлечь карту памяти MicroSD. Данную карту подключить к компьютеру через кардридер и далее действовать по инструкции:
 
 1. Скачайте с нашего сайта образ:
-https://sprecord.ru/files/downloads/m-mt/armbian_5.15_ip114_12_10_2023.zip 
+https://sprecord.ru/files/downloads/m-mt/armbian_5.15_ip114_26_01_2024.zip 
 
 2. Установите программу [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/)
 

@@ -2,7 +2,7 @@
 title: Восстановление доступа к устройству
 description: 
 published: true
-date: 2024-02-15T08:46:09.491Z
+date: 2024-02-15T08:46:49.821Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-17T07:37:45.129Z
@@ -38,7 +38,7 @@ IP-адрес устройства станет по умолчанию 192.168.
 - Образ для устройств со старой ревизией платы (без кнопки сброса)
 https://sprecord.ru/files/downloads/m-mt/armbian_5.15_ip114_26_01_2024_old_revision.zip
 
-- Образ для устройств с новоей ревизией платы (есть кнопка сброса)
+- Образ для устройств с новой ревизией платы (есть кнопка сброса)
 https://sprecord.ru/files/downloads/m-mt/armbian_5.15_ip114_26_01_2024.zip 
 
 2. Установите программу [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/)

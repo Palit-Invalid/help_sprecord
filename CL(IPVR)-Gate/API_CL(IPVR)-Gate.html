@@ -2,7 +2,7 @@
 title: API CL(IPVR)-Gate
 description: 
 published: true
-date: 2023-11-17T07:24:22.222Z
+date: 2025-03-07T05:53:34.439Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-11-17T07:14:03.603Z
@@ -14,6 +14,7 @@ dateCreated: 2023-11-17T07:14:03.603Z
 <p>get /api/relay переключение реле&nbsp; пример: http://192.168.88.152/api/relay?relay=2&amp;state=0&amp;token=admin</p>
 <p>get /api/settings получение настроек в json</p>
 <p>post /api/settings установка настроек&nbsp; (json)</p>
+<p>&nbsp;</p>
 <p>put /api/number&nbsp; добавить номер</p>
 <pre><code class="language-plaintext">PUT  http://192.168.88.152/api/numbers?token=admin
 
@@ -39,7 +40,7 @@ dateCreated: 2023-11-17T07:14:03.603Z
 <p>post /api/cmd выполнить команду</p>
 <pre><code class="language-plaintext">reboot", "factory_reset
 </code></pre>
-<p>&nbsp;</p>
+<p>Перезагрузка.</p>
 <pre><code class="language-plaintext">POST http://192.168.88.198/api/cmd/?token=admin
 
 
@@ -51,7 +52,18 @@ dateCreated: 2023-11-17T07:14:03.603Z
 }
 </code></pre>
 <p>&nbsp;</p>
-<p>get /api/pin_status получить текущие значения статусов</p>
+<p>Установка времени.</p>
+<pre><code class="language-plaintext">POST http://192.168.88.153/api/cmd/?token=admin
+
+{
+   "cmd": "set_time",
+   "params": {
+       "localtime":"2025-01-30T13:48:00"
+   }
+}</code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>get /api/pin_status получить текущие значения состояние пинов.</p>
 <pre><code class="language-plaintext">{
   "success": true,
   "relays": [
@@ -65,7 +77,31 @@ dateCreated: 2023-11-17T07:14:03.603Z
 }
 </code></pre>
 <p>&nbsp;</p>
+<p>get /api/status - получить полное значение статусов устройства (состояние сети, серийный номер, время, соcтояние GSM сигнала и тд.)</p>
+<pre><code class="language-plaintext">{
+  "network": {
+    "ip": "192.168.88.153",
+    "gateway": "192.168.88.1",
+    "netmask": "255.255.255.0",
+    "con_type": "ethernet"
+  },
+  "uptime": 739,
+  "firmware": "0.15_tcp_reconnection, Apr 25 2023 11:19:25",
+  "serial": "test_0000031",
+  "localtime": "2025-03-07T09:34:22",
+  "total_phones": 2,
+  "gsm_signal": 29,
+  "gsm_status": "registered",
+  "relays": [0, 0],
+  "inputs": [0, 0]
+}</code></pre>
 <p>post /access_list&nbsp; загрузить csv файл с номерами. CSV файл передается в теле запроса.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

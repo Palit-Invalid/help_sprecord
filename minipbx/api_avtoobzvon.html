@@ -2,261 +2,271 @@
 title: Автообзвон: Руководство пользователя по API
 description: Автообзвон: Руководство пользователя по API
 published: true
-date: 2026-03-10T06:56:12.508Z
+date: 2026-03-18T05:10:22.741Z
 tags: 
 editor: ckeditor
 dateCreated: 2026-03-10T06:56:12.508Z
 -->
 
-<h1><strong>Автообзвон: Руководство пользователя по API</strong></h1>
-<p>Система автообзвона позволяет автоматически обзванивать сотрудников или клиентов по заданному списку номеров. Управление происходит через запросы, которые можно отправлять через браузер, специальные программы или встраивать в интерфейсы.</p>
-<p><br>&nbsp;</p>
-<h2><strong>1. Запуск задания (POST-запрос)</strong></h2>
-<p>Чтобы робот начал обзванивать, нужно отправить системе название сценария и список номеров.</p>
-<h3><strong>Как это работает</strong></h3>
-<p>Вы отправляете POST-запрос с JSON-данными, в которых указываете:</p>
-<p><strong>name </strong>— название сценария (задания), заранее созданного в АТС.</p>
-<p><strong>list </strong>(необязательно) — список внутренних номеров для обзвона. Если список не указан, используется тот, что привязан к сценарию.</p>
-<h3><strong>Формат запроса</strong></h3>
-<p>POST https://api.youraccount.ats.com/auto_call/start
-  Content-Type: application/json</p>
-<h3><strong>Пример 1. Запуск со стандартным списком (из сценария)</strong></h3>
-<p>json</p>
-<p>{
-  &nbsp;"name": "напоминание"
-  }</p>
-<h3><strong>Пример 2. Запуск со своим списком номеров</strong></h3>
-<p>json</p>
-<p>{
-  &nbsp;"name": "напоминание",
-  &nbsp;"list": ["1002", "1003", "1004", "1005"]
-  }</p>
-<h3><strong>Что вы получите в ответ</strong></h3>
-<p><strong>Успешный запуск</strong></p>
-<p>json</p>
-<p>{
-  &nbsp;"result": "ok",
-  &nbsp;"result_txt": "Задание напоминание запущено",
-  &nbsp;"id": 506
-  }</p>
-<p><strong>Важно: </strong>сохраните <strong>ID задачи (506) </strong>— он понадобится для всех следующих шагов: проверки статуса, получения результатов и управления.</p>
-<p><strong>Задание уже выполняется</strong></p>
-<p>json</p>
-<p>{
-  &nbsp;"result": "warning",
-  &nbsp;"result_txt": "Задание напоминание уже выполняется",
-  &nbsp;"result_code": "already_running"
-  }</p>
-<p>Значит, это задание уже запущено. Дождитесь его завершения или остановите текущее.</p>
-<p><strong>Задание не найдено</strong></p>
-<p>json</p>
-<p>{
-  &nbsp;"result": "error",
-  &nbsp;"result_txt": "задание напоминание не найдено",
-  &nbsp;"result_code": "not_found"
-  }</p>
-<p>Проверьте название сценария — возможно, опечатка или его еще не создали в АТС.</p>
-<p><br>&nbsp;</p>
-<h2><strong>2. Проверка статуса задания (GET-запрос)</strong></h2>
-<p>В любой момент можно посмотреть, как идет обзвон: сколько номеров обработано, сколько успешно, есть ли пауза.</p>
-<h3><strong>Формат запроса</strong></h3>
-<p>GET https://api.youraccount.ats.com/auto_call/status?id=506</p>
-<p>(где 506 — ID вашей задачи)</p>
-<h3><strong>Что вы получите в ответ</strong></h3>
-<p><strong>Успешный ответ</strong></p>
-<p>json</p>
-<p>{
-  &nbsp;"result": "ok",
-  &nbsp;"state": "run",
-  &nbsp;"total": 10,
-  &nbsp;"done": 5,
-  &nbsp;"success": 3,
-  &nbsp;"tried": 7,
-  &nbsp;"attempts": 7
-  }</p>
-<p><strong>Расшифровка:</strong></p>
-<p><code>state</code>— состояние: <code>run </code>(выполняется), <code>pause </code>(на паузе), <code>finish </code>(завершено), <code>stop </code>(остановлено), <code>none </code>(не запускалось)</p>
-<p><code>total</code>— всего номеров в задании</p>
-<p><code>done</code>— сколько номеров уже обработано полностью</p>
-<p><code>success</code>— сколько успешных разговоров</p>
-<p><code>tried</code>— сколько номеров пробовали обзвонить (с учетом повторов)</p>
-<p><code>attempts</code>— общее количество попыток дозвона</p>
-<p><strong>Задание не найдено</strong></p>
-<p>json</p>
-<p>{
-  &nbsp;"result": "error",
-  &nbsp;"result_txt": "задание 506 не найдено",
-  &nbsp;"result_code": "not_found"
-  }</p>
-<p><br>&nbsp;</p>
-<h2><strong>3. Получение детальных результатов (GET-запрос)</strong></h2>
-<p>После обзвона (или даже во время него) можно посмотреть подробный отчет по каждому номеру.</p>
-<h3><strong>Формат запроса</strong></h3>
-<p>GET https://api.youraccount.ats.com/auto_call/result?id=506</p>
-<h3><strong>Что вы получите в ответ</strong></h3>
-<p><strong>Успешный ответ</strong></p>
-<p>json</p>
-<p>{
-  &nbsp;"result": "ok",
-  &nbsp;"data": [
-  &nbsp; &nbsp;{
-  &nbsp; &nbsp; &nbsp;"number": "1002",
-  &nbsp; &nbsp; &nbsp;"result": "ok",
-  &nbsp; &nbsp; &nbsp;"result_code": "talk"
-  &nbsp; &nbsp;},
-  &nbsp; &nbsp;{
-  &nbsp; &nbsp; &nbsp;"number": "1003",
-  &nbsp; &nbsp; &nbsp;"result": "fail",
-  &nbsp; &nbsp; &nbsp;"result_code": "busy"
-  &nbsp; &nbsp;},
-  &nbsp; &nbsp;{
-  &nbsp; &nbsp; &nbsp;"number": "1004",
-  &nbsp; &nbsp; &nbsp;"result": "dialing",
-  &nbsp; &nbsp; &nbsp;"result_code": ""
-  &nbsp; &nbsp;}
-  &nbsp;]
-  }</p>
-<p><strong>Расшифровка:</strong></p>
-<p><code>number</code>— внутренний номер абонента</p>
-<p><code>result</code>— итог: <code>ok </code>(успешно), <code>fail </code>(неуспешно), <code>dialing </code>(в процессе). Если поля нет — звонок еще не совершался</p>
-<p><code>result_code</code>— детальный код результата</p>
-<h3><strong>Коды результатов (почему не дозвонились)</strong></h3>
+<h1><strong>API автообзвона MiniPBX</strong></h1>
+<p><span class="text-big"><strong>Базовый URL: http://xxx.xxx.xxx.xxx:9000</strong></span></p>
+<p>&nbsp;</p>
+<blockquote>
+  <p><strong>Важно: </strong>Все запросы к API должны использовать заголовок Content-Type: text/plain, даже если тело запроса выглядит как JSON.</p>
+</blockquote>
+<h2><strong>1. Запуск задания автообзвона</strong></h2>
+<p>Запускает задание автообзвона по имени, которое уже создано и настроено на АТС.</p>
+<p><strong>Тип запроса:</strong> POST<br><strong>Endpoint:</strong> /auto_call/start<br><strong>Заголовок:</strong> Content-Type: text/plain</p>
+<p><strong>Вариант 1: Запуск готового задания (со своим списком номеров на АТС)</strong></p>
+<p><strong>Тело запроса:</strong></p>
+<p><code>json</code></p>
+<p><code>{"name":"тест"}</code></p>
+<p><strong>Пример cURL:</strong></p>
+<pre><code class="language-plaintext">bash
+curl -X POST 'http://xxx.xxx.xxx.xxx:9000/auto_call/start' \
+-H 'Content-Type: text/plain' \
+-d '{"name":"тест"}'</code></pre>
+<p><strong>Вариант 2: Запуск задания с указанием списка номеров</strong></p>
+<p><strong>Тело запроса:</strong></p>
+<p><code>json</code></p>
+<p><code>{"name":"тест","list":["1002","1003","1004","1005"]}</code></p>
+<p><strong>Пример cURL:</strong></p>
+<pre><code class="language-plaintext">bash
+curl -X POST 'http://192.168.88.121:9000/auto_call/start' \
+-H 'Content-Type: text/plain' \
+-d '{"name":"тест","list":["1002","1003","1004","1005"]}'</code></pre>
+<p><strong>Ответы:</strong></p>
+<p><strong>Успешный запуск:</strong></p>
+<p><code>json</code></p>
+<p><code>{</code></p>
+<p><code>"result": "ok",</code></p>
+<p><code>"result_txt": "Задание тест запущено",</code></p>
+<p><code>"id": 506</code></p>
+<p><code>}</code></p>
+<p><strong>Задание уже выполняется:</strong></p>
+<p><code>json</code></p>
+<p><code>{</code></p>
+<p><code>"result": "warning",</code></p>
+<p><code>"result_txt": "Задание тест уже выполняется",</code></p>
+<p><code>"result_code": "already_running"</code></p>
+<p><code>}</code></p>
+<p><strong>Задание не найдено:</strong></p>
+<p><code>json</code></p>
+<p><code>{</code></p>
+<p><code>"result": "error",</code></p>
+<p><code>"result_txt": "задание тест не найдено",</code></p>
+<p><code>"result_code": "not_found"</code></p>
+<p><code>}</code></p>
+<p>&nbsp;</p>
+<h2><strong>2. Проверка статуса выполнения</strong></h2>
+<p>Получает информацию о ходе выполнения запущенного задания.</p>
+<p><strong>Тип запроса:</strong> GET<br><strong>Endpoint:</strong> /auto_call/status<br><strong>Параметр:</strong> id — идентификатор задания (из ответа на запуск)</p>
+<p><strong>Пример запроса:</strong></p>
+<p><code>text</code></p>
+<p><code>GET http://192.168.88.121:9000/auto_call/status?id=506</code></p>
+<p><strong>Пример cURL:</strong></p>
+<pre><code class="language-plaintext">bash
+curl 'http://192.168.88.121:9000/auto_call/status?id=506'</code></pre>
+<p>&nbsp;</p>
+<p><strong>Ответ:</strong></p>
+<p><strong>Успешный ответ:</strong></p>
+<p><code>json</code></p>
+<p><code>{</code></p>
+<p><code>"result": "ok",</code></p>
+<p><code>"state": "run",</code></p>
+<p><code>"total": 10,</code></p>
+<p><code>"done": 5,</code></p>
+<p><code>"success": 0,</code></p>
+<p><code>"tried": 5,</code></p>
+<p><code>"attempts": 5,</code></p>
+<p><code>"comment": "state - состояние (none - не выполнялось, run - выполняется, finish - выполнено, pause - приостановлено, stop - прервано); total - общее количество номеров; tried - количество номеров, до которых были попытки дозвониться; success - количество успешных попыток; attempts - общее число попыток дозвона; done - количество номеров до которых дозвон закончен"</code></p>
+<p><code>}</code></p>
+<p><strong>Задание не найдено:</strong></p>
+<p><code>json</code></p>
+<p><code>{</code></p>
+<p><code>"result": "error",</code></p>
+<p><code>"result_txt": "задание 506 не найдено",</code></p>
+<p><code>"result_code": "not_found"</code></p>
+<p><code>}</code></p>
+<h2><strong>3. Получение результатов обзвона</strong></h2>
+<p>Возвращает детальную информацию по каждому номеру в задании.</p>
+<p><strong>Тип запроса:</strong> GET<br><strong>Endpoint:</strong> /auto_call/result<br><strong>Параметр:</strong> id — идентификатор задания</p>
+<p><strong>Пример запроса:</strong></p>
+<p><code>text</code></p>
+<p><code>GET http://192.168.88.121:9000/auto_call/result?id=506</code></p>
+<p><strong>Пример cURL:</strong></p>
+<pre><code class="language-plaintext">bash
+curl 'http://192.168.88.121:9000/auto_call/result?id=506'</code></pre>
+<p>&nbsp;</p>
+<p><strong>Ответы:</strong></p>
+<p><strong>Успешные звонки:</strong></p>
+<p><code>json</code></p>
+<p><code>{</code></p>
+<p><code>"result": "ok",</code></p>
+<p><code>"data": [</code></p>
+<p><code>{ "number": "1002", "result": "ok", "result_code": "talk" },</code></p>
+<p><code>{ "number": "1003", "result": "ok", "result_code": "talk_ok" }</code></p>
+<p><code>]</code></p>
+<p><code>}</code></p>
+<p><strong>Неудачные звонки:</strong></p>
+<p><code>json</code></p>
+<p><code>{</code></p>
+<p><code>"result": "ok",</code></p>
+<p><code>"data": [</code></p>
+<p><code>{ "number": "1002", "result": "fail", "result_code": "busy" },</code></p>
+<p><code>{ "number": "1003", "result": "fail", "result_code": "timeout" }</code></p>
+<p><code>]</code></p>
+<p><code>}</code></p>
+<p><strong>Пояснение полей data:</strong></p>
 <figure class="table">
   <table>
-    <thead>
-      <tr>
-        <th>Код</th>
-        <th>Значение</th>
-      </tr>
-    </thead>
     <tbody>
       <tr>
-        <td>talk, talk_ok</td>
-        <td>Разговор состоялся</td>
+        <td>Поле</td>
+        <td>Описание</td>
       </tr>
       <tr>
-        <td>talk_unsuccess</td>
-        <td>Разговор был, но без результата</td>
+        <td>number</td>
+        <td>Номер телефона</td>
       </tr>
       <tr>
-        <td>busy, line_busy</td>
-        <td>Занято</td>
+        <td>result</td>
+        <td>Результат: ok / fail / dialing (если отсутствует — попыток не было)</td>
       </tr>
       <tr>
-        <td>timeout</td>
-        <td>Долго не берут трубку</td>
-      </tr>
-      <tr>
-        <td>unavailable, no_route</td>
-        <td>Номер недоступен</td>
-      </tr>
-      <tr>
-        <td>line_fail, error, break</td>
-        <td>Техническая ошибка или обрыв</td>
-      </tr>
-      <tr>
-        <td>result#1, result#2, result#3</td>
-        <td>Свои коды из сценария</td>
+        <td>result_code</td>
+        <td>Код результата: talk, talk_ok, talk_unsuccess, busy, timeout, unavailable, no_route, line_busy, line_fail, error, break</td>
       </tr>
     </tbody>
   </table>
 </figure>
-<p><br>&nbsp;</p>
-<h2><strong>4. Управление заданием (GET-запросы)</strong></h2>
-<p>Если нужно вмешаться в процесс, используйте команды управления.</p>
-<h3><strong>Поставить на паузу</strong></h3>
-<p>text</p>
-<p>GET https://api.youraccount.ats.com/auto_call/start?id=506&amp;cmd=task_pause</p>
-<p><strong>Ответ: </strong><code>Выполнение задания приостановлено</code></p>
-<h3><strong>Продолжить после паузы</strong></h3>
-<p>text</p>
-<p>GET https://api.youraccount.ats.com/auto_call/start?id=506&amp;cmd=task_resume</p>
-<p><strong>Ответ:</strong>&nbsp;<code>Выполнение задания возобновлено</code></p>
-<h3><strong>Полностью остановить</strong></h3>
-<p>text</p>
-<p>GET https://api.youraccount.ats.com/auto_call/start?id=506&amp;cmd=task_stop</p>
-<p><strong>Ответ: </strong><code>Задание остановлено</code></p>
-<h3><strong>Возможные предупреждения</strong></h3>
+<p><strong>Примечание: </strong>В сценариях могут использоваться дополнительные коды result#1, result#2, result#3 — они устанавливаются в настройках сценария на АТС.</p>
+<h2><strong>4. Управление заданием</strong></h2>
+<p>Позволяет ставить на паузу, возобновлять или останавливать выполнение задания.</p>
+<p><strong>Тип запроса:</strong> GET<br><strong>Endpoint:</strong> /auto_call/start<br><strong>Параметры:</strong></p>
+<p>id — идентификатор задания</p>
+<p>cmd — команда:</p>
+<p>task_pause — поставить на паузу</p>
+<p>task_resume — продолжить после паузы</p>
+<p>task_stop — полностью остановить</p>
+<p><strong>Пример запроса (пауза):</strong></p>
+<p><code>text</code></p>
+<p><code>GET http://192.168.88.121:9000/auto_call/start?id=506&amp;cmd=task_pause</code></p>
+<p><strong>Пример cURL:</strong></p>
+<pre><code class="language-plaintext">bash
+curl 'http://192.168.88.121:9000/auto_call/start?id=506&amp;cmd=task_pause'</code></pre>
+<p><strong>Ответы:</strong></p>
+<p><strong>Команда выполнена:</strong></p>
+<p><code>json</code></p>
+<p><code>{</code></p>
+<p><code>"result": "ok",</code></p>
+<p><code>"result_txt": "Выполнение задания приостановлено"</code></p>
+<p><code>}</code></p>
+<p><strong>Предупреждения:</strong></p>
+<p>&nbsp;</p>
 <figure class="table">
   <table>
-    <thead>
-      <tr>
-        <th>Ситуация</th>
-        <th>Ответ</th>
-      </tr>
-    </thead>
     <tbody>
       <tr>
-        <td>Уже на паузе</td>
-        <td>"result_txt": "Уже приостановлено"</td>
+        <td>Ситуация</td>
+        <td>Ответ</td>
       </tr>
       <tr>
-        <td>Пытаемся продолжить не приостановленное</td>
-        <td>"result_txt": "Не находится в состоянии паузы"</td>
+        <td>Уже на паузе</td>
+        <td>{"result": "warning", "result_txt": "Уже приостановлено", "result_code": "already_suspended"}</td>
+      </tr>
+      <tr>
+        <td>Не на паузе (при попытке возобновить)</td>
+        <td>{"result": "warning", "result_txt": "Не находится в состоянии паузы", "result_code": "not_suspended"}</td>
       </tr>
       <tr>
         <td>Задание не запущено</td>
-        <td>"result_txt": "Задание не запущено"</td>
+        <td>{"result": "warning", "result_txt": "Задание не запущено", "result_code": "not_running"}</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><strong>Ошибка:</strong></p>
+<p><code>json</code></p>
+<p><code>{</code></p>
+<p><code>"result": "error",</code></p>
+<p><code>"result_txt": "задание 506 не найдено",</code></p>
+<p><code>"result_code": "not_found"</code></p>
+<p><code>}</code></p>
+<p>&nbsp;</p>
+<h2><strong>5. Примеры использования в Postman</strong></h2>
+<p><strong>Настройки запроса для запуска:</strong><br>&nbsp;</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>Параметр</td>
+        <td>Значение</td>
+      </tr>
+      <tr>
+        <td><strong>Method</strong></td>
+        <td>POST</td>
+      </tr>
+      <tr>
+        <td><strong>URL</strong></td>
+        <td>http://192.168.88.121:9000/auto_call/start</td>
+      </tr>
+      <tr>
+        <td><strong>Headers</strong></td>
+        <td>Content-Type: text/plain</td>
+      </tr>
+      <tr>
+        <td><strong>Body</strong></td>
+        <td>Raw → {"name":"тест","list":["1002","1003"]}</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<p><strong>Настройки запроса для статуса:</strong><br>&nbsp;</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>Параметр</td>
+        <td>Значение</td>
+      </tr>
+      <tr>
+        <td><strong>Method</strong></td>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <td><strong>URL</strong></td>
+        <td>http://192.168.88.121:9000/auto_call/status?id=506</td>
+      </tr>
+      <tr>
+        <td><strong>Headers</strong></td>
+        <td>не требуются</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<p><strong>Настройки запроса для управления:</strong><br>&nbsp;</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>Параметр</td>
+        <td>Значение</td>
+      </tr>
+      <tr>
+        <td><strong>Method</strong></td>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <td><strong>URL</strong></td>
+        <td>http://192.168.88.121:9000/auto_call/start?id=506&amp;cmd=task_pause</td>
       </tr>
     </tbody>
   </table>
 </figure>
 <p><br>&nbsp;</p>
-<h2><strong>Шпаргалка: что и когда использовать</strong></h2>
-<figure class="table">
-  <table>
-    <thead>
-      <tr>
-        <th>Действие</th>
-        <th>Тип запроса</th>
-        <th>Что отправляем</th>
-        <th>Где взять ID</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Запустить</td>
-        <td>POST</td>
-        <td>{"name": "сценарий", "list": [...]}</td>
-        <td>Не нужен</td>
-      </tr>
-      <tr>
-        <td>Статус</td>
-        <td>GET</td>
-        <td>/status?id=506</td>
-        <td>Из ответа на запуск</td>
-      </tr>
-      <tr>
-        <td>Результаты</td>
-        <td>GET</td>
-        <td>/result?id=506</td>
-        <td>Из ответа на запуск</td>
-      </tr>
-      <tr>
-        <td>Пауза</td>
-        <td>GET</td>
-        <td>/start?id=506&amp;cmd=task_pause</td>
-        <td>Из ответа на запуск</td>
-      </tr>
-      <tr>
-        <td>Продолжить</td>
-        <td>GET</td>
-        <td>/start?id=506&amp;cmd=task_resume</td>
-        <td>Из ответа на запуск</td>
-      </tr>
-      <tr>
-        <td>Остановить</td>
-        <td>GET</td>
-        <td>/start?id=506&amp;cmd=task_stop</td>
-        <td>Из ответа на запуск</td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
-<hr>
-<h2><strong>Важно запомнить</strong></h2>
-<p><strong>Базовый адрес </strong>(<a href="https://api.youraccount.ats.com/">https://api.youraccount.ats.com</a>) — уточните у администратора вашей АТС.</p>
-<p><strong>ID задачи </strong>— сохраняйте его сразу после запуска, без него вы не сможете проверить статус или результаты.</p>
-<p><strong>POST-запрос </strong>используется только для запуска. Все остальные действия — это <strong>GET-запросы</strong>.</p>
-<p>Если вы запускаете задание с тем же именем, пока предыдущее еще работает — получите предупреждение.</p>
+<p><br>&nbsp;</p>
+<p><br><br>&nbsp;</p>
 <p><br>&nbsp;</p>

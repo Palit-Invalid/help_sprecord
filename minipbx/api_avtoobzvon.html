@@ -2,7 +2,7 @@
 title: Автообзвон: Руководство пользователя по API
 description: Автообзвон: Руководство пользователя по API
 published: true
-date: 2026-03-18T05:10:22.741Z
+date: 2026-03-18T05:19:17.131Z
 tags: 
 editor: ckeditor
 dateCreated: 2026-03-10T06:56:12.508Z
@@ -32,7 +32,7 @@ curl -X POST 'http://xxx.xxx.xxx.xxx:9000/auto_call/start' \
 <p><code>{"name":"тест","list":["1002","1003","1004","1005"]}</code></p>
 <p><strong>Пример cURL:</strong></p>
 <pre><code class="language-plaintext">bash
-curl -X POST 'http://192.168.88.121:9000/auto_call/start' \
+curl -X POST 'http://xxx.xxx.xxx.xxx:9000/auto_call/start' \
 -H 'Content-Type: text/plain' \
 -d '{"name":"тест","list":["1002","1003","1004","1005"]}'</code></pre>
 <p><strong>Ответы:</strong></p>
@@ -63,10 +63,10 @@ curl -X POST 'http://192.168.88.121:9000/auto_call/start' \
 <p><strong>Тип запроса:</strong> GET<br><strong>Endpoint:</strong> /auto_call/status<br><strong>Параметр:</strong> id — идентификатор задания (из ответа на запуск)</p>
 <p><strong>Пример запроса:</strong></p>
 <p><code>text</code></p>
-<p><code>GET http://192.168.88.121:9000/auto_call/status?id=506</code></p>
+<p><code>GET http://xxx.xxx.xxx.xxx:9000/auto_call/status?id=506</code></p>
 <p><strong>Пример cURL:</strong></p>
 <pre><code class="language-plaintext">bash
-curl 'http://192.168.88.121:9000/auto_call/status?id=506'</code></pre>
+curl 'http://xxx.xxx.xxx.xxx:9000/auto_call/status?id=506'</code></pre>
 <p>&nbsp;</p>
 <p><strong>Ответ:</strong></p>
 <p><strong>Успешный ответ:</strong></p>
@@ -93,10 +93,10 @@ curl 'http://192.168.88.121:9000/auto_call/status?id=506'</code></pre>
 <p><strong>Тип запроса:</strong> GET<br><strong>Endpoint:</strong> /auto_call/result<br><strong>Параметр:</strong> id — идентификатор задания</p>
 <p><strong>Пример запроса:</strong></p>
 <p><code>text</code></p>
-<p><code>GET http://192.168.88.121:9000/auto_call/result?id=506</code></p>
+<p><code>GET http://xxx.xxx.xxx.xxx:9000/auto_call/result?id=506</code></p>
 <p><strong>Пример cURL:</strong></p>
 <pre><code class="language-plaintext">bash
-curl 'http://192.168.88.121:9000/auto_call/result?id=506'</code></pre>
+curl 'http://xxx.xxx.xxx.xxx:9000/auto_call/result?id=506'</code></pre>
 <p>&nbsp;</p>
 <p><strong>Ответы:</strong></p>
 <p><strong>Успешные звонки:</strong></p>
@@ -151,10 +151,10 @@ curl 'http://192.168.88.121:9000/auto_call/result?id=506'</code></pre>
 <p>task_stop — полностью остановить</p>
 <p><strong>Пример запроса (пауза):</strong></p>
 <p><code>text</code></p>
-<p><code>GET http://192.168.88.121:9000/auto_call/start?id=506&amp;cmd=task_pause</code></p>
+<p><code>GET http://xxx.xxx.xxx.xxx:9000/auto_call/start?id=506&amp;cmd=task_pause</code></p>
 <p><strong>Пример cURL:</strong></p>
 <pre><code class="language-plaintext">bash
-curl 'http://192.168.88.121:9000/auto_call/start?id=506&amp;cmd=task_pause'</code></pre>
+curl 'http://xxx.xxx.xxx.xxx:9000/auto_call/start?id=506&amp;cmd=task_pause'</code></pre>
 <p><strong>Ответы:</strong></p>
 <p><strong>Команда выполнена:</strong></p>
 <p><code>json</code></p>
@@ -209,7 +209,7 @@ curl 'http://192.168.88.121:9000/auto_call/start?id=506&amp;cmd=task_pause'</cod
       </tr>
       <tr>
         <td><strong>URL</strong></td>
-        <td>http://192.168.88.121:9000/auto_call/start</td>
+        <td>http://xxx.xxx.xxx.xxx:9000/auto_call/start</td>
       </tr>
       <tr>
         <td><strong>Headers</strong></td>
@@ -237,7 +237,7 @@ curl 'http://192.168.88.121:9000/auto_call/start?id=506&amp;cmd=task_pause'</cod
       </tr>
       <tr>
         <td><strong>URL</strong></td>
-        <td>http://192.168.88.121:9000/auto_call/status?id=506</td>
+        <td>http://xxx.xxx.xxx.xxx:9000/auto_call/status?id=506</td>
       </tr>
       <tr>
         <td><strong>Headers</strong></td>
@@ -261,7 +261,7 @@ curl 'http://192.168.88.121:9000/auto_call/start?id=506&amp;cmd=task_pause'</cod
       </tr>
       <tr>
         <td><strong>URL</strong></td>
-        <td>http://192.168.88.121:9000/auto_call/start?id=506&amp;cmd=task_pause</td>
+        <td>http://xxx.xxx.xxx.xxx:9000/auto_call/start?id=506&amp;cmd=task_pause</td>
       </tr>
     </tbody>
   </table>
